@@ -1,0 +1,10 @@
+.Button {
+  outline: 0;
+  border: 0;
+
+  background-color: blueviolet;
+  padding: 1rem 2rem;
+  color: white;
+  font-weight: bold;
+  border-radius: 0.2rem;
+}
