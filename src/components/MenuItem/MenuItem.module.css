@@ -1,0 +1,7 @@
+.link {
+  font-weight: bold;
+  cursor: pointer;
+}
+.link:hover {
+  color: purple;
+}

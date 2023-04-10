@@ -1,0 +1,16 @@
+.Header {
+  min-height: fit-content;
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  background-color: #242424;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
