@@ -23,9 +23,9 @@ function App() {
         projectsRef={projectsRef}
       />
       <Home homeRef={homeRef} />
+      <About aboutRef={aboutRef} />
       <Skills skillsRef={skillsRef} />
       <Projects projectsRef={projectsRef} />
-      <About aboutRef={aboutRef} />
       <Contact contactRef={contactRef} />
     </div>
   );
