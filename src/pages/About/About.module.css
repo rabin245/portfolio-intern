@@ -1,3 +1,48 @@
 .About {
-  height: 50vh;
+  height: 80vh;
+  background-color: #121111;
+}
+.wrapper {
+  padding: 6rem 8rem;
+
+  display: flex;
+  flex-direction: row;
+}
+
+.experience {
+  flex: 1;
+}
+
+.experience h2 {
+  margin: 0;
+  font-size: 3.25rem;
+  font-weight: 800;
+  margin: 1rem 0;
+  color: blueviolet;
+}
+
+.experience span {
+  font-size: 1.25rem;
+  font-weight: 300;
+  letter-spacing: 1.5px;
+}
+
+.description {
+  flex: 2;
+  position: relative;
+}
+
+.content {
+  font-size: 2rem;
+  font-weight: 300;
+  letter-spacing: 1.5px;
+}
+
+.content span {
+  font-weight: 600;
+  color: blueviolet;
+}
+
+.cards {
+  position: absolute;
 }
