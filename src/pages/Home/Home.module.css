@@ -1,6 +1,5 @@
 .Home {
-  height: 100vh;
-  margin-bottom: 4rem;
+  height: 80vh;
 }
 
 .wrapper {
@@ -22,7 +21,7 @@
 
 .content .name {
   font-size: 3rem;
-  font-weight: 600;
+  font-weight: 500;
 }
 
 .content p {
