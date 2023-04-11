@@ -7,4 +7,13 @@
   color: white;
   font-weight: bold;
   border-radius: 0.2rem;
+  cursor: pointer;
+}
+
+.Button:hover {
+  background-color: #a64dff;
+}
+.Button:active {
+  background-color: #a64dff;
+  transform: scale(0.95);
 }
