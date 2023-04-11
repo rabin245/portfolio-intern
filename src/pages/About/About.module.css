@@ -1,5 +1,5 @@
 .About {
-  height: 80vh;
+  min-height: max-content;
   background-color: #121111;
 }
 .wrapper {
@@ -36,6 +36,7 @@
   font-size: 2rem;
   font-weight: 300;
   letter-spacing: 1.5px;
+  margin-bottom: 4rem;
 }
 
 .content span {
@@ -45,4 +46,7 @@
 
 .cards {
   position: absolute;
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(3, 1fr);
 }

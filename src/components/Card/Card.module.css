@@ -17,12 +17,18 @@
 .icon {
   width: fit-content;
 }
+
 .Card:hover .icon {
   transform: rotate(10deg);
 }
+
 .title {
   margin: 0;
+  font-weight: 400;
+  font-size: 1.25rem;
+  width: 80%;
 }
+
 .content {
   margin: 0;
 }
