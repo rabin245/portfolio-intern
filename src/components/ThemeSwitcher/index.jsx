@@ -1,5 +1,5 @@
-import SunIcon from "./SunIcon";
-import MoonIcon from "./MoonIcon";
+import SunIcon from "../../assets/icons/SunIcon";
+import MoonIcon from "../../assets/icons/MoonIcon";
 import { useContext } from "react";
 import { ThemeContext } from "../../context/ThemeContext";
 import styles from "./ThemeSwitcher.module.css";
