@@ -1,4 +1,5 @@
 import MenuItem from "../MenuItem";
+import ThemeSwitcher from "../ThemeSwitcher";
 import styles from "./Menu.module.css";
 
 const Menu = ({ homeRef, aboutRef, contactRef, skillsRef, projectsRef }) => {
@@ -9,6 +10,7 @@ const Menu = ({ homeRef, aboutRef, contactRef, skillsRef, projectsRef }) => {
       <MenuItem title="Skills" reference={skillsRef} />
       <MenuItem title="Projects" reference={projectsRef} />
       <MenuItem title="Contact" reference={contactRef} />
+      <ThemeSwitcher />
     </div>
   );
 };
