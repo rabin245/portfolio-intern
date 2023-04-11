@@ -1,0 +1,27 @@
+.FormInput {
+  display: flex;
+  flex-direction: column;
+  border-radius: 5px;
+  background-color: #121111;
+  padding: 0.5rem 0 0.5rem 0.75rem;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+}
+
+.FormInput:focus-within {
+  box-shadow: 0 0 0 2px blueviolet;
+}
+
+.FormInput > span {
+  color: #d6d4d4;
+  font-size: 1rem;
+  font-weight: 300;
+  margin-bottom: 0.5rem;
+}
+
+.input {
+  background-color: transparent;
+  border: none;
+  outline: 0;
+  font-size: 1rem;
+  font-weight: 300;
+}
