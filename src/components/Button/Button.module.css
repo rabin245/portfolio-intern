@@ -28,7 +28,7 @@
 /* scroll button */
 .ScrollToTop {
   position: fixed;
-  right: 2rem;
+  right: 2.5rem;
   bottom: 2rem;
   z-index: 100;
 
@@ -43,14 +43,14 @@
   background-color: blueviolet;
   cursor: pointer;
   color: white;
-  transition: all 0.3s ease-in-out;
+  transition: all 0.2s ease-in-out;
 
   opacity: 0;
   visibility: hidden;
 }
 
 .ScrollToTop:hover {
-  background-color: rgba(138, 43, 226, 0.8);
+  background-color: #a64dff;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
 }
 

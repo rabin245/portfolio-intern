@@ -3,7 +3,7 @@ import styles from "./MenuItem.module.css";
 const MenuItem = ({ title, reference }) => {
   // scrolls to the reference element
   const scrollToRef = (ref) =>
-    window.scrollTo({ top: ref.current.offsetTop - 75, behavior: "smooth" });
+    window.scrollTo({ top: ref.current.offsetTop - 65, behavior: "smooth" });
   return (
     <div
       className={styles.link}
