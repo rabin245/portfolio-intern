@@ -1,9 +1,12 @@
 .About {
   min-height: max-content;
-  background-color: #121111;
+  color: var(--text-color);
+  background-color: var(--secondary-background-color);
+
+  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
 }
 .wrapper {
-  padding: 6rem 8rem;
+  padding: 10rem 8rem;
 
   display: flex;
   flex-direction: row;
@@ -17,7 +20,7 @@
   margin: 0;
   font-size: 3.25rem;
   font-weight: 800;
-  margin: 1rem 0;
+  margin-bottom: 1rem;
   color: blueviolet;
 }
 
@@ -49,4 +52,5 @@
   display: grid;
   gap: 1rem;
   grid-template-columns: repeat(3, 1fr);
+  margin-top: 3rem;
 }
