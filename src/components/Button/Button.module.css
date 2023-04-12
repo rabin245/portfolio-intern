@@ -1,3 +1,4 @@
+/* button */
 .Button {
   outline: 0;
   border: 0;
@@ -16,4 +17,10 @@
 .Button:active {
   background-color: #a64dff;
   transform: scale(0.95);
+}
+
+/* Theme switcher button */
+.themeButton {
+  cursor: pointer;
+  height: 24px;
 }
