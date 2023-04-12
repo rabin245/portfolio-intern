@@ -1,0 +1,27 @@
+.infoDiv {
+  margin: 0;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+}
+.info > span {
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+.info > a {
+  text-decoration: none;
+  color: var(--text-color);
+  font-weight: 400;
+  opacity: 0.8;
+}
+
+.info > a:hover {
+  text-decoration: underline;
+}
