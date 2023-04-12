@@ -60,3 +60,70 @@
 }
 
 /* projects card */
+
+.ProjectCard {
+  position: relative;
+  overflow: hidden;
+}
+
+.ProjectCard:nth-child(even) {
+  transform: translateY(3rem);
+}
+
+.ProjectCard__image {
+}
+
+.ProjectCard__image > img {
+  object-fit: cover;
+  width: 100%;
+}
+
+.ProjectCard__desc {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.7;
+  background-color: #000;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+
+  transform: translateX(-100%);
+  transition: transform 0.3s ease-in-out;
+}
+
+.ProjectCard:hover .ProjectCard__desc {
+  transform: translateX(0);
+}
+
+.ProjectCard__title {
+  font-size: 1.5rem;
+  font-weight: 300;
+  color: #fff;
+  margin: 0;
+}
+
+.ProjectCard__icons {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+
+.ProjectCard__linkIcon {
+  border-radius: 50%;
+  border: 3px solid white;
+  padding: 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ProjectCard__linkIcon:hover {
+  background-color: #fff;
+  color: black;
+}
