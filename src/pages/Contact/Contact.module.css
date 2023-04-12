@@ -1,3 +1,35 @@
 .Contact {
-  height: 50vh;
+  height: 80vh;
+}
+
+.wrapper {
+  display: flex;
+  padding: 4rem 8rem;
+  gap: 2rem;
+}
+
+.connectInfo {
+  flex: 1;
+}
+
+.connectInfo > h1 {
+  margin: 0;
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.ContactForm > form {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.button {
+  width: fit-content;
+}
+
+.ContactForm {
+  flex: 1;
+  max-width: 50%;
 }
