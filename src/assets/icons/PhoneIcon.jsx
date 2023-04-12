@@ -5,7 +5,7 @@ const PhoneIcon = ({ size }) => (
     width={size}
     height={size}
     viewBox="0 0 24 24"
-    stroke-width={1.75}
+    strokeWidth={1.75}
     stroke="currentColor"
     fill="none"
     strokeLinecap="round"

@@ -1,4 +1,5 @@
-.Card {
+/* about card */
+.AboutCard {
   background-color: #323131;
   border-radius: 4px;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
@@ -10,25 +11,119 @@
   padding: 1rem;
 }
 
-.Card:hover {
+.AboutCard:hover {
   background-color: blueviolet;
-}
-
-.icon {
-  width: fit-content;
-}
-
-.Card:hover .icon {
   transform: rotate(10deg);
 }
 
-.title {
+.AboutCard__icon {
+  width: fit-content;
+}
+
+.AboutCard:hover .AboutCard__icon {
+  transform: rotate(-25deg) translate(15px, -30px);
+}
+
+.AboutCard__title {
   margin: 0;
   font-weight: 400;
   font-size: 1.25rem;
   width: 80%;
 }
 
-.content {
+/* skills card */
+
+.SkillCard {
+  background-color: #323131;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  padding: 1rem;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.SkillCard__description {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+}
+
+.SkillCard__description > h3 {
   margin: 0;
+  font-weight: 500;
+}
+
+.SkillCard__description > p {
+  margin: 0;
+  font-weight: 300;
+}
+
+/* projects card */
+
+.ProjectCard {
+  position: relative;
+  overflow: hidden;
+}
+
+.ProjectCard:nth-child(even) {
+  transform: translateY(3rem);
+}
+
+.ProjectCard__image {
+}
+
+.ProjectCard__image > img {
+  object-fit: cover;
+  width: 100%;
+}
+
+.ProjectCard__desc {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.7;
+  background-color: #000;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+
+  transform: translateX(-100%);
+  transition: transform 0.3s ease-in-out;
+}
+
+.ProjectCard:hover .ProjectCard__desc {
+  transform: translateX(0);
+}
+
+.ProjectCard__title {
+  font-size: 1.5rem;
+  font-weight: 300;
+  color: #fff;
+  margin: 0;
+}
+
+.ProjectCard__icons {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+
+.ProjectCard__linkIcon {
+  border-radius: 50%;
+  border: 3px solid white;
+  padding: 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ProjectCard__linkIcon:hover {
+  background-color: #fff;
+  color: black;
 }
