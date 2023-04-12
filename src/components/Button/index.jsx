@@ -1,4 +1,5 @@
 import styles from "./Button.module.css";
+import ArrowUpIcon from "../../assets/icons/ArrowUpIcon";
 import SunIcon from "../../assets/icons/SunIcon";
 import MoonIcon from "../../assets/icons/MoonIcon";
 
@@ -20,4 +21,22 @@ const ThemeSwitcherButton = ({ darkMode, switchTheme }) => {
   );
 };
 
-export { Button, ThemeSwitcherButton };
+const ScrollToTopButton = ({ show }) => {
+  const gotoTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
+
+  return (
+    <div
+      className={`${styles.ScrollToTop} ${show && styles.visible}`}
+      onClick={gotoTop}
+    >
+      <ArrowUpIcon />
+    </div>
+  );
+};
+
+export { Button, ThemeSwitcherButton, ScrollToTopButton };

@@ -24,3 +24,37 @@
   cursor: pointer;
   height: 24px;
 }
+
+/* scroll button */
+.ScrollToTop {
+  position: fixed;
+  right: 2rem;
+  bottom: 2rem;
+  z-index: 100;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  padding: 10px;
+  border-radius: 5px;
+
+  background-color: blueviolet;
+  cursor: pointer;
+  color: white;
+  transition: all 0.3s ease-in-out;
+
+  opacity: 0;
+  visibility: hidden;
+}
+
+.ScrollToTop:hover {
+  background-color: rgba(138, 43, 226, 0.8);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+}
+
+.visible {
+  opacity: 1;
+  visibility: visible;
+}
