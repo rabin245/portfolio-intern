@@ -49,7 +49,7 @@ function App() {
         skillsRef={skillsRef}
         projectsRef={projectsRef}
       />
-      <Home homeRef={homeRef} />
+      <Home homeRef={homeRef} contactRef={contactRef} />
       <About aboutRef={aboutRef} />
       <Skills skillsRef={skillsRef} />
       <Projects projectsRef={projectsRef} />

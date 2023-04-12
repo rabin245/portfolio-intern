@@ -1,7 +1,11 @@
 import styles from "./Button.module.css";
 
-const Button = () => {
-  return <button className={styles.Button}>Button</button>;
+const Button = ({ children, handleClick }) => {
+  return (
+    <button className={styles.Button} onClick={handleClick}>
+      {children}
+    </button>
+  );
 };
 
 export default Button;
