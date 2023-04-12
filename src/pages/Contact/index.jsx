@@ -67,39 +67,42 @@ const Contact = ({ contactRef }) => {
     console.log("Submitted", inputs);
   };
 
+  const contactInfo = [
+    {
+      icon: <PhoneIcon size={40} />,
+      title: "Call me",
+      link: "tel:+9779762875880",
+      linkText: "+977-9762875880",
+    },
+    {
+      icon: <MailIcon size={40} />,
+      title: "Email me",
+      link: "mailto:drarabin@gmail.com",
+      linkText: "drarabin@gmail.com",
+    },
+    {
+      icon: <FindMeIcon size={40} />,
+      title: "Find me on",
+      link: "https://www.linkedin.com/in/rabindra-baisnab/",
+      linkText: "Linkedin",
+    },
+    {
+      icon: <MapIcon size={40} />,
+      title: "Address",
+      link: "https://goo.gl/maps/N9qLMN2MeFWjK5UF6",
+      linkText: "Chundevi, Bhaktapur",
+    },
+  ];
+
   return (
     <div className={styles.Contact} ref={contactRef}>
       <div className={styles.wrapper}>
         <div className={styles.connectInfo}>
           <h1>Connect with me</h1>
 
-          <ContactInfo
-            icon={<PhoneIcon size={40} />}
-            title="Call me"
-            link="tel:+9779762875880"
-            linkText="+977-9762875880"
-          />
-
-          <ContactInfo
-            icon={<MailIcon size={40} />}
-            title="Email me"
-            link="mailto:drarabin@gmail.com"
-            linkText="drarabin@gmail.com"
-          />
-
-          <ContactInfo
-            icon={<FindMeIcon size={40} />}
-            title="Find me on"
-            link="https://www.linkedin.com/in/rabindra-baisnab/"
-            linkText="Linkedin"
-          />
-
-          <ContactInfo
-            icon={<MapIcon size={40} />}
-            title="Address"
-            link="https://goo.gl/maps/N9qLMN2MeFWjK5UF6"
-            linkText="Chundevi, Bhaktapur"
-          />
+          {contactInfo.map((info, index) => (
+            <ContactInfo key={index} {...info} />
+          ))}
         </div>
 
         <ContactForm
