@@ -1,4 +1,5 @@
-.Card {
+/* about card */
+.AboutCard {
   background-color: #323131;
   border-radius: 4px;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
@@ -10,25 +11,52 @@
   padding: 1rem;
 }
 
-.Card:hover {
+.AboutCard:hover {
   background-color: blueviolet;
-}
-
-.icon {
-  width: fit-content;
-}
-
-.Card:hover .icon {
   transform: rotate(10deg);
 }
 
-.title {
+.AboutCard__icon {
+  width: fit-content;
+}
+
+.AboutCard:hover .AboutCard__icon {
+  transform: rotate(-25deg) translate(15px, -30px);
+}
+
+.AboutCard__title {
   margin: 0;
   font-weight: 400;
   font-size: 1.25rem;
   width: 80%;
 }
 
-.content {
-  margin: 0;
+/* skills card */
+
+.SkillCard {
+  background-color: #323131;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  padding: 1rem;
+
+  display: flex;
+  flex-direction: column;
 }
+
+.SkillCard__description {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+}
+
+.SkillCard__description > h3 {
+  margin: 0;
+  font-weight: 500;
+}
+
+.SkillCard__description > p {
+  margin: 0;
+  font-weight: 300;
+}
+
+/* projects card */

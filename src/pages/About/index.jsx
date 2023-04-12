@@ -1,6 +1,6 @@
 import styles from "./About.module.css";
 import WebIcon from "../../assets/icons/WebIcon";
-import Card from "../../components/Card";
+import { AboutCard } from "../../components/Card";
 import ServerIcon from "../../assets/icons/ServerIcon";
 import DevicesIcon from "../../assets/icons/DevicesIcon";
 
@@ -26,7 +26,7 @@ const About = ({ aboutRef }) => {
           </div>
           <div className={styles.cards}>
             {cards.map((card, index) => (
-              <Card key={index} {...card} />
+              <AboutCard key={index} {...card} />
             ))}
           </div>
         </div>

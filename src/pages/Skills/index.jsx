@@ -1,4 +1,4 @@
-import SkillCard from "../../components/SkillCard";
+import { SkillCard } from "../../components/Card";
 import styles from "./Skills.module.css";
 
 const Skills = ({ skillsRef }) => {
