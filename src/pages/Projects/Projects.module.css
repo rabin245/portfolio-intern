@@ -4,11 +4,45 @@
 }
 
 .wrapper {
-  padding: 2rem 8rem;
+  padding: 6rem 8rem 10rem 8rem;
 }
 
 .projects {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 5rem 10rem;
+}
+
+.header {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.title {
+  font-weight: 500;
+  font-size: 2rem;
+  margin: 0;
+}
+
+.content {
+  font-weight: 300;
+}
+
+.link {
+  text-decoration: none;
+  font-weight: 500;
+  color: blueviolet !important;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.arrow {
+  transition: transform 0.3s ease-in-out;
+}
+
+.link:hover .arrow {
+  transform: translateX(0.5rem);
 }
