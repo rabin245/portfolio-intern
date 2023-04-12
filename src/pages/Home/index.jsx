@@ -1,6 +1,6 @@
 import styles from "./Home.module.css";
 import Image from "../../assets/images/banner-image.png";
-import Button from "../../components/Button";
+import { Button } from "../../components/Button";
 
 const Home = ({ homeRef, contactRef }) => {
   const scrollToRef = (ref) =>

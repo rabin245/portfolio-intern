@@ -1,6 +1,6 @@
 import MenuItem from "../MenuItem";
-import ThemeSwitcher from "../ThemeSwitcher";
 import styles from "./Menu.module.css";
+import { ThemeSwitcherButton } from "../Button";
 
 const Menu = ({ menuItems, darkMode, switchTheme }) => {
   return (
@@ -13,7 +13,7 @@ const Menu = ({ menuItems, darkMode, switchTheme }) => {
         />
       ))}
 
-      <ThemeSwitcher darkMode={darkMode} switchTheme={switchTheme} />
+      <ThemeSwitcherButton darkMode={darkMode} switchTheme={switchTheme} />
     </div>
   );
 };
