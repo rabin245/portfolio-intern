@@ -1,14 +1,19 @@
 import MenuItem from "../MenuItem";
+import ThemeSwitcher from "../ThemeSwitcher";
 import styles from "./Menu.module.css";
 
-const Menu = ({ homeRef, aboutRef, contactRef, skillsRef, projectsRef }) => {
+const Menu = ({ menuItems, darkMode, switchTheme }) => {
   return (
     <div className={styles.menu}>
-      <MenuItem title="Home" reference={homeRef} />
-      <MenuItem title="About" reference={aboutRef} />
-      <MenuItem title="Skills" reference={skillsRef} />
-      <MenuItem title="Projects" reference={projectsRef} />
-      <MenuItem title="Contact" reference={contactRef} />
+      {menuItems.map((item) => (
+        <MenuItem
+          key={item.title}
+          title={item.title}
+          reference={item.reference}
+        />
+      ))}
+
+      <ThemeSwitcher darkMode={darkMode} switchTheme={switchTheme} />
     </div>
   );
 };

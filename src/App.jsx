@@ -1,10 +1,37 @@
-import { useRef } from "react";
+import { useContext, useRef } from "react";
 import Home from "./pages/Home";
 import About from "./pages/About";
-import Header from "./components/Header";
 import Contact from "./pages/Contact";
 import Skills from "./pages/Skills";
 import Projects from "./pages/Projects";
+import { ThemeContext } from "./context/ThemeContext";
+import Logo from "./components/Logo";
+import Menu from "./components/Menu";
+
+const Header = ({ homeRef, aboutRef, skillsRef, projectsRef, contactRef }) => {
+  const menuItems = [
+    { title: "Home", reference: homeRef },
+    { title: "About", reference: aboutRef },
+    { title: "Skills", reference: skillsRef },
+    { title: "Projects", reference: projectsRef },
+    { title: "Contact", reference: contactRef },
+  ];
+
+  const { darkMode, switchTheme } = useContext(ThemeContext);
+
+  return (
+    <div className="Header">
+      <nav>
+        <Logo />
+        <Menu
+          menuItems={menuItems}
+          darkMode={darkMode}
+          switchTheme={switchTheme}
+        />
+      </nav>
+    </div>
+  );
+};
 
 function App() {
   const homeRef = useRef(null);
