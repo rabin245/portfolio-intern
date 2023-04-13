@@ -58,3 +58,9 @@
   opacity: 1;
   visibility: visible;
 }
+
+@media only screen and (max-width: 1024px) {
+  .Button {
+    font-size: 1.25rem;
+  }
+}

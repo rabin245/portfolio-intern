@@ -23,6 +23,7 @@ body {
   background-color: var(--background-color);
 
   transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+  margin: 0;
 }
 
 .Header {
@@ -30,6 +31,7 @@ body {
   position: sticky;
   top: 0;
   left: 0;
+  right: 0;
   z-index: 10;
   background-color: var(--background-color);
   transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
@@ -43,6 +45,18 @@ body {
   padding: 1rem 8rem;
 }
 
-body {
-  margin: 0;
+@media only screen and (max-width: 1024px) {
+  .Header > nav {
+    padding: 0.5rem 2rem;
+  }
+
+  .Header {
+    width: 100vw;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .Header > nav {
+    padding: 0.5rem 1rem;
+  }
 }
