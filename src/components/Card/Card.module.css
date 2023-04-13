@@ -131,3 +131,58 @@
   background-color: #fff;
   color: black !important;
 }
+
+@media only screen and (max-width: 1024px) {
+  /* about card */
+  .AboutCard {
+    height: 8rem;
+  }
+
+  .AboutCard:hover .AboutCard__icon {
+    transform: rotate(-25deg) translate(10px, -20px);
+  }
+
+  .AboutCard__title {
+    font-size: 1rem;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  /* about card */
+  .AboutCard {
+    height: 6rem;
+    gap: 0.75rem;
+  }
+
+  .AboutCard:hover .AboutCard__icon {
+    transform: rotate(-25deg) translate(5px, -10px);
+  }
+
+  .AboutCard__title {
+    font-size: 0.75rem;
+    text-align: start;
+  }
+
+  .AboutCard__icon svg {
+    width: 1.8rem;
+    height: 1.8rem;
+    stroke-width: 1.5;
+  }
+}
+
+@media only screen and (max-width: 350px) {
+  /* about card */
+  .AboutCard {
+    height: 6rem;
+    width: max-content;
+    margin: auto;
+  }
+
+  .AboutCard:hover .AboutCard__icon {
+    transform: rotate(-25deg) translate(10px, -20px);
+  }
+
+  .AboutCard__title {
+    width: 100%;
+  }
+}

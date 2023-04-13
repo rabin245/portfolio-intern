@@ -10,6 +10,7 @@
 
   display: flex;
   flex-direction: row;
+  gap: 2rem;
 }
 
 .experience {
@@ -51,6 +52,78 @@
   position: absolute;
   display: grid;
   gap: 1rem;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3, minmax(200px, 1fr));
   margin-top: 3rem;
+}
+
+@media only screen and (max-width: 1024px) {
+  .wrapper {
+    flex-direction: column;
+    padding: 4rem 2rem;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .experience h2 {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 0rem;
+  }
+
+  .experience span {
+    font-size: 0.9rem;
+  }
+
+  .content {
+    font-size: 1rem;
+  }
+
+  .cards {
+    grid-template-columns: repeat(3, minmax(160px, 1fr));
+    margin-top: 0rem;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .wrapper {
+    flex-direction: column;
+    padding: 1rem;
+  }
+
+  .experience {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .experience h2 {
+    font-size: 1.5rem;
+  }
+
+  .experience span {
+    text-align: center;
+  }
+
+  .description {
+    text-align: center;
+    position: static;
+  }
+
+  .content {
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+
+  .cards {
+    position: relative;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    margin: 2rem;
+  }
+}
+
+@media only screen and (max-width: 350px) {
+  .cards {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 1.5rem;
+    margin: 0;
+  }
 }
