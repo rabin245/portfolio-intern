@@ -13,13 +13,16 @@
 
   --background-color: #242424;
   --text-color: #ffffffde;
+  --secondary-background-color: #121111;
+  --card-background-color: #323131;
+  --bar-background-color: #eaeaea;
   color: var(--text-color);
 }
 
 body {
   background-color: var(--background-color);
 
-  transition: background-color 0.2s ease-in-out;
+  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
 }
 
 .Header {
@@ -29,7 +32,7 @@ body {
   left: 0;
   z-index: 10;
   background-color: var(--background-color);
-  transition: background-color 0.2s ease-in-out;
+  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 

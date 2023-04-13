@@ -14,9 +14,8 @@ const Home = ({ homeRef, contactRef }) => {
             Hi, I'm <span className={styles.name}>Rabindra Baisnab</span>
           </h1>
           <p>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolor odio
-            ad nisi harum fugiat hic aliquam fugit repudiandae ea iusto corporis
-            pariatur ullam deleniti culpa perspiciatis, odit aperiam esse omnis.
+            Full Stack Web Developer with a passion for building responsive
+            websites and web applications specialized in React and Node.
           </p>
           <div>
             <Button handleClick={() => scrollToRef(contactRef)}>Hire me</Button>

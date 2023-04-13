@@ -1,10 +1,11 @@
 .Projects {
-  /* height: 50vh; */
-  background-color: #121111;
+  background-color: var(--secondary-background-color);
+
+  transition: all 0.2s ease-in-out;
 }
 
 .wrapper {
-  padding: 6rem 8rem 10rem 8rem;
+  padding: 6rem 8rem 11rem 8rem;
 }
 
 .projects {
