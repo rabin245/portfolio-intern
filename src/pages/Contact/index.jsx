@@ -7,6 +7,7 @@ import FindMeIcon from "../../assets/icons/FindMeIcon";
 import FormInput from "../../components/FormInput";
 import { Button } from "../../components/Button";
 import ContactInfo from "../../components/ContactInfo";
+import SendIcon from "../../assets/icons/SendIcon";
 
 const ContactForm = ({ inputs, handleChange, handleSubmit }) => {
   return (
@@ -34,7 +35,10 @@ const ContactForm = ({ inputs, handleChange, handleSubmit }) => {
         />
 
         <div className={styles.button}>
-          <Button handleClick={handleSubmit}>Send</Button>
+          <Button handleClick={handleSubmit}>
+            <span>Send</span>
+            <SendIcon />
+          </Button>
         </div>
       </form>
     </div>
@@ -98,18 +102,23 @@ const Contact = ({ contactRef }) => {
     <div className={styles.Contact} ref={contactRef}>
       <div className={styles.wrapper}>
         <div className={styles.connectInfo}>
-          <h1>Connect with me</h1>
-
-          {contactInfo.map((info, index) => (
-            <ContactInfo key={index} {...info} />
-          ))}
+          <h1>Let's connect</h1>
+          <div className={styles.infos}>
+            {contactInfo.map((info, index) => (
+              <ContactInfo key={index} {...info} />
+            ))}
+          </div>
         </div>
 
-        <ContactForm
-          inputs={inputs}
-          handleChange={handleChange}
-          handleSubmit={handleSubmit}
-        />
+        <div className={styles.form}>
+          <h2>Get in touch</h2>
+
+          <ContactForm
+            inputs={inputs}
+            handleChange={handleChange}
+            handleSubmit={handleSubmit}
+          />
+        </div>
       </div>
     </div>
   );
