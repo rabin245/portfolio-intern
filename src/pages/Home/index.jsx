@@ -15,7 +15,7 @@ const Home = ({ homeRef, contactRef }) => {
           </h1>
           <p>
             Full Stack Web Developer with a passion for building responsive
-            websites and web applications specialized in React and Node.
+            websites and web applications.
           </p>
           <div>
             <Button handleClick={() => scrollToRef(contactRef)}>Hire me</Button>

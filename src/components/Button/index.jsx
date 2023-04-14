@@ -12,7 +12,7 @@ const Button = ({ children, handleClick }) => {
 };
 
 const ThemeSwitcherButton = ({ darkMode, switchTheme }) => {
-  const icon = darkMode ? <MoonIcon /> : <SunIcon />;
+  const icon = darkMode ? <SunIcon /> : <MoonIcon />;
 
   return (
     <div className={styles.themeButton} onClick={switchTheme}>
