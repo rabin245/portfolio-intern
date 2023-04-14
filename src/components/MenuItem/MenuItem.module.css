@@ -5,3 +5,40 @@
 .link:hover {
   color: blueviolet;
 }
+
+.mobilelink {
+  display: flex;
+  align-items: center;
+
+  gap: 1rem;
+  padding: 1rem 6rem;
+  border-radius: 10px;
+}
+
+.mobilelink:hover {
+  background-color: var(--secondary-background-color);
+}
+
+@media only screen and (max-width: 700px) {
+  .mobilelink {
+    padding: 1rem 4rem;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .mobilelink {
+    padding: 1rem 2rem;
+  }
+}
+
+/* @media only screen and (max-width: 500px) {
+  .mobilelink {
+    padding: 1rem 2rem;
+  }
+}
+
+@media only screen and (max-width: 350px) {
+  .mobilelink {
+    padding: 1rem 2rem;
+  }
+} */
