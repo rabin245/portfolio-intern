@@ -164,6 +164,11 @@
   .SkillCard__description > p {
     font-size: 0.75rem;
   }
+
+  /* projects card */
+  .ProjectCard:nth-child(even) {
+    transform: translateY(2rem);
+  }
 }
 
 @media only screen and (max-width: 768px) {
@@ -196,6 +201,11 @@
   .SkillCard__description > p {
     font-size: 0.65rem;
   }
+
+  /* projects card */
+  .ProjectCard:nth-child(even) {
+    transform: none;
+  }
 }
 
 @media only screen and (max-width: 350px) {
@@ -212,5 +222,14 @@
 
   .AboutCard__title {
     width: 100%;
+  }
+
+  /* projects card */
+  .ProjectCard__title {
+    font-size: 1.25rem;
+  }
+
+  .ProjectCard__icons {
+    gap: 0.5rem;
   }
 }
