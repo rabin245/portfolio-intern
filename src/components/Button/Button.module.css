@@ -75,9 +75,28 @@
   visibility: visible;
 }
 
+/* menu toggle buttons */
+.MenuToggleButton {
+  display: none;
+  cursor: pointer;
+  height: 24px;
+}
+
+.CloseMenuButton {
+  cursor: pointer;
+  height: 24px;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+}
+
 @media only screen and (max-width: 768px) {
   .ScrollToTop {
     right: 1rem;
     bottom: 1rem;
+  }
+
+  .MenuToggleButton {
+    display: block;
   }
 }
