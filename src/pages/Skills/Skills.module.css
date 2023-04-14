@@ -16,6 +16,34 @@
 
 .cards {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 1rem 2rem;
+}
+
+@media only screen and (max-width: 1024px) {
+  .wrapper {
+    padding: 3rem 2rem 10rem 2rem;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .wrapper {
+    padding: 2rem 1rem;
+  }
+
+  .wrapper > h1 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    margin-top: 0;
+  }
+
+  .cards {
+    grid-template-columns: repeat(2 minmax(0, 1fr));
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .cards {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
 }

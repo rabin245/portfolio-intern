@@ -58,6 +58,7 @@
 }
 
 .SkillCard__description > p {
+  font-size: 0.95rem;
   margin: 0;
   font-weight: 300;
 }
@@ -145,6 +146,24 @@
   .AboutCard__title {
     font-size: 1rem;
   }
+
+  /* skills card */
+  .SkillCard {
+    padding: 0.5rem;
+  }
+
+  .SkillCard__description {
+    margin-bottom: 0.25rem;
+  }
+
+  .SkillCard__description > h3 {
+    font-size: 0.85rem;
+    font-weight: 300;
+  }
+
+  .SkillCard__description > p {
+    font-size: 0.75rem;
+  }
 }
 
 @media only screen and (max-width: 768px) {
@@ -167,6 +186,15 @@
     width: 1.8rem;
     height: 1.8rem;
     stroke-width: 1.5;
+  }
+
+  /* skills card */
+  .SkillCard__description > h3 {
+    font-size: 0.75rem;
+  }
+
+  .SkillCard__description > p {
+    font-size: 0.65rem;
   }
 }
 
