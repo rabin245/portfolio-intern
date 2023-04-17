@@ -15,7 +15,7 @@ const AboutCard = ({ icon, title }) => {
 const SkillCard = ({ title, icon }) => {
   return (
     <div className={styles.SkillCard}>
-      <div className={styles.icon}>{icon}</div>
+      <div className={styles.SkillCard__icon}>{icon}</div>
       <h3>{title}</h3>
     </div>
   );
