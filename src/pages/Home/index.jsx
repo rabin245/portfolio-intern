@@ -1,6 +1,6 @@
 import styles from "./Home.module.css";
 import Image from "../../assets/images/banner-image.png";
-import { Button, DownloadButton, SocialButton } from "../../components/Button";
+import { Button, SocialButton } from "../../components/Button";
 import GithubIcon from "../../assets/icons/GithubIcon";
 import LinkedinIcon from "../../assets/icons/LinkedinIcon";
 import TwitterIcon from "../../assets/icons/TwitterIcon";
@@ -50,12 +50,12 @@ const Home = ({ homeRef, contactRef }) => {
             <Button handleClick={() => scrollToRef(contactRef)}>
               <span>Hire me</span>
             </Button>
-            <DownloadButton>
+            <Button type="download">
               <>
                 <span>Download CV</span>
                 <DownloadIcon />
               </>
-            </DownloadButton>
+            </Button>
           </div>
         </div>
         <div className={styles.image}>

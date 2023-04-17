@@ -5,7 +5,7 @@
   cursor: pointer;
 }
 
-.logo:hover a {
+.logo:hover > a {
   color: blueviolet;
 }
 
@@ -14,10 +14,7 @@
   text-decoration: none;
 }
 
-.logo > a:hover {
-  color: blueviolet;
-}
-
-.logo > a:visited {
+.logo > a:visited,
+.logo > a:active {
   color: inherit;
 }

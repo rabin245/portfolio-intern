@@ -1,4 +1,4 @@
-import styles from "./ContactInfo.module.css";
+import styles from "./Card.module.css";
 
 const ContactInfo = ({ icon, title, link, linkText }) => {
   return (

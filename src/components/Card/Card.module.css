@@ -154,6 +154,47 @@
   color: black !important;
 }
 
+/* contactinfo card */
+.infoDiv {
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  width: fit-content;
+}
+
+.infoDiv:hover {
+  transform: scale(1.1);
+}
+
+.infoDiv:hover > svg {
+  color: blueviolet;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+}
+
+.info > span {
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+.info > a {
+  text-decoration: none;
+  color: var(--text-color);
+  font-weight: 400;
+  opacity: 0.8;
+
+  transition: color 0.2s ease-in-out;
+}
+
+.info > a:hover {
+  text-decoration: underline;
+  color: blueviolet;
+}
+
 @media only screen and (max-width: 1024px) {
   /* about card */
   .AboutCard {
@@ -224,6 +265,15 @@
   /* projects card */
   .ProjectCard:nth-child(even) {
     transform: none;
+  }
+
+  /* contactinfo card */
+  .info > span {
+    font-size: 1.1rem;
+  }
+
+  .info > a {
+    font-size: 0.9rem;
   }
 }
 
