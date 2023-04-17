@@ -16,6 +16,7 @@
   --secondary-background-color: #dcdcdc;
   --card-background-color: #eaeaea;
   --bar-background-color: #cdcdcd;
+  --download-button-color: blueviolet;
   color: var(--text-color);
 }
 
@@ -25,6 +26,7 @@
   --secondary-background-color: #121111;
   --card-background-color: #323131;
   --bar-background-color: #dcdcdc;
+  --download-button-color: #ffffffde;
 }
 
 body {
