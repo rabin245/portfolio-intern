@@ -4,7 +4,7 @@
 
 .wrapper {
   display: flex;
-  padding: 6rem 8rem;
+  padding: 6rem 8rem 4rem 8rem;
   justify-content: space-between;
 }
 
