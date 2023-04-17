@@ -1,3 +1,11 @@
+import BootstrapIcon from "../../assets/icons/BootstrapIcon";
+import CssIcon from "../../assets/icons/CssIcon";
+import HtmlIcon from "../../assets/icons/HtmlIcon";
+import JavaScriptIcon from "../../assets/icons/JavascriptIcon";
+import PythonIcon from "../../assets/icons/PythonIcon";
+import ReactIcon from "../../assets/icons/ReactIcon";
+import SassIcon from "../../assets/icons/SassIcon";
+import TailwindIcon from "../../assets/icons/TailwindIcons";
 import { SkillCard } from "../../components/Card";
 import styles from "./Skills.module.css";
 
@@ -5,27 +13,35 @@ const Skills = ({ skillsRef }) => {
   const skills = [
     {
       title: "HTML",
-      completed: 80,
+      icon: <HtmlIcon />,
     },
     {
       title: "CSS",
-      completed: 70,
+      icon: <CssIcon />,
     },
     {
       title: "JavaScript",
-      completed: 60,
+      icon: <JavaScriptIcon />,
     },
     {
       title: "Python",
-      completed: 80,
+      icon: <PythonIcon />,
     },
     {
       title: "React",
-      completed: 60,
+      icon: <ReactIcon />,
     },
     {
-      title: "Node",
-      completed: 60,
+      title: "SASS",
+      icon: <SassIcon />,
+    },
+    {
+      title: "TailwindCSS",
+      icon: <TailwindIcon />,
+    },
+    {
+      title: "Bootstrap",
+      icon: <BootstrapIcon />,
     },
   ];
 
@@ -38,8 +54,8 @@ const Skills = ({ skillsRef }) => {
           {skills.map((skill) => (
             <SkillCard
               key={skill.title}
+              icon={skill.icon}
               title={skill.title}
-              completed={skill.completed}
             />
           ))}
         </div>

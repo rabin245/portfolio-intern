@@ -38,29 +38,50 @@
 .SkillCard {
   background-color: var(--card-background-color);
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
-  border-radius: 4px;
+  border-radius: 5px;
   padding: 1rem;
 
   display: flex;
   flex-direction: column;
   transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
 }
 
-.SkillCard__description {
+.SkillCard__icon {
   display: flex;
-  justify-content: space-between;
-  margin-bottom: 0.5rem;
+  justify-content: center;
+  align-items: center;
 }
 
-.SkillCard__description > h3 {
+.SkillCard__icon > svg {
+  width: 3rem;
+  height: 3rem;
+}
+
+.SkillCard:hover .SkillCard__icon > svg {
+  animation: spin 2s ease-in-out infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(360deg);
+  }
+
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.SkillCard > h3 {
   margin: 0;
   font-weight: 500;
-}
-
-.SkillCard__description > p {
-  font-size: 0.95rem;
-  margin: 0;
-  font-weight: 300;
+  letter-spacing: 2px;
 }
 
 /* projects card */
@@ -152,17 +173,14 @@
     padding: 0.5rem;
   }
 
-  .SkillCard__description {
-    margin-bottom: 0.25rem;
+  .SkillCard__icon > svg {
+    width: 2.5rem;
+    height: 2.5rem;
   }
 
-  .SkillCard__description > h3 {
+  .SkillCard > h3 {
     font-size: 0.85rem;
-    font-weight: 300;
-  }
-
-  .SkillCard__description > p {
-    font-size: 0.75rem;
+    font-weight: 400;
   }
 
   /* projects card */
@@ -194,12 +212,13 @@
   }
 
   /* skills card */
-  .SkillCard__description > h3 {
-    font-size: 0.75rem;
+  .SkillCard__icon {
+    width: 2.25rem;
+    height: 2.25rem;
   }
 
-  .SkillCard__description > p {
-    font-size: 0.65rem;
+  .SkillCard > h3 {
+    font-size: 0.75rem;
   }
 
   /* projects card */

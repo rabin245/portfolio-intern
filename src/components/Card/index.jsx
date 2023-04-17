@@ -1,4 +1,3 @@
-import ProgressBar from "../ProgressBar";
 import styles from "./Card.module.css";
 import LinkIcon from "../../assets/icons/LinkIcon";
 import GithubIcon from "../../assets/icons/GithubIcon";
@@ -12,14 +11,11 @@ const AboutCard = ({ icon, title }) => {
   );
 };
 
-const SkillCard = ({ title, completed }) => {
+const SkillCard = ({ title, icon }) => {
   return (
     <div className={styles.SkillCard}>
-      <div className={styles.SkillCard__description}>
-        <h3>{title}</h3>
-        <p>{completed}%</p>
-      </div>
-      <ProgressBar completed={completed} />
+      <div className={styles.SkillCard__icon}>{icon}</div>
+      <h3>{title}</h3>
     </div>
   );
 };
