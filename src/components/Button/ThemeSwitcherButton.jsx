@@ -1,3 +1,5 @@
+import MoonIcon from "../../assets/icons/MoonIcon";
+import SunIcon from "../../assets/icons/SunIcon";
 import styles from "./Button.module.css";
 
 const ThemeSwitcherButton = ({ darkMode, switchTheme }) => {
