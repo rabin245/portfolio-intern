@@ -37,6 +37,12 @@
   gap: 1rem;
 }
 
+.buttons {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
 .image {
   flex: 1;
   margin: 0 1rem;

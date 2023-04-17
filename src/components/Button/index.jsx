@@ -70,6 +70,19 @@ const SocialButton = ({ icon, link }) => {
   );
 };
 
+const DownloadButton = ({ children }) => {
+  return (
+    <a
+      href="/src/assets/cv/cv.pdf"
+      className={`${styles.Button} ${styles.DownloadButton}`}
+      download={true}
+      target="_blank"
+    >
+      {children}
+    </a>
+  );
+};
+
 export {
   Button,
   ThemeSwitcherButton,
@@ -77,4 +90,5 @@ export {
   MenuToggleButton,
   CloseMenuButton,
   SocialButton,
+  DownloadButton,
 };
