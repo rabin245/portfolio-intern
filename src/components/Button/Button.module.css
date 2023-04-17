@@ -7,12 +7,16 @@
   padding: 1rem 2rem;
   color: white;
   font-weight: bold;
-  border-radius: 0.2rem;
+  border-radius: 0.35rem;
   cursor: pointer;
 
   display: flex;
   align-items: center;
   gap: 1rem;
+}
+
+.Button > span {
+  font-size: 1rem;
 }
 
 .Button > svg {
@@ -23,7 +27,8 @@
 }
 
 .Button:hover {
-  background-color: #a64dff;
+  opacity: 0.9;
+  box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.2);
 }
 
 .Button:hover > svg {
@@ -113,6 +118,38 @@
 .SocialButton > svg {
   width: 1.75rem !important;
   height: 1.75rem !important;
+}
+
+.DownloadButton {
+  cursor: pointer;
+  padding: 1rem;
+  text-decoration: none;
+
+  background-color: transparent;
+  border: blueviolet solid 2px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: blueviolet;
+}
+
+.DownloadButton:hover {
+  background-color: blueviolet;
+  color: white;
+}
+
+.DownloadButton > span {
+  font-weight: 500;
+}
+
+.DownloadButton > svg {
+  width: inherit !important;
+  height: inherit !important;
+}
+
+.DownloadButton:hover > svg {
+  transform: translateY(0.3rem);
 }
 
 @media only screen and (max-width: 768px) {

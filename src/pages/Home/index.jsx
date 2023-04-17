@@ -1,10 +1,11 @@
 import styles from "./Home.module.css";
 import Image from "../../assets/images/banner-image.png";
-import { Button, SocialButton } from "../../components/Button";
+import { Button, DownloadButton, SocialButton } from "../../components/Button";
 import GithubIcon from "../../assets/icons/GithubIcon";
 import LinkedinIcon from "../../assets/icons/LinkedinIcon";
 import TwitterIcon from "../../assets/icons/TwitterIcon";
 import InstagramIcon from "../../assets/icons/InstagramIcon";
+import DownloadIcon from "../../assets/icons/DownloadIcon";
 
 const Home = ({ homeRef, contactRef }) => {
   const scrollToRef = (ref) =>
@@ -45,8 +46,16 @@ const Home = ({ homeRef, contactRef }) => {
               <SocialButton key={info.link} icon={info.icon} link={info.link} />
             ))}
           </div>
-          <div>
-            <Button handleClick={() => scrollToRef(contactRef)}>Hire me</Button>
+          <div className={styles.buttons}>
+            <Button handleClick={() => scrollToRef(contactRef)}>
+              <span>Hire me</span>
+            </Button>
+            <DownloadButton>
+              <>
+                <span>Download CV</span>
+                <DownloadIcon />
+              </>
+            </DownloadButton>
           </div>
         </div>
         <div className={styles.image}>
