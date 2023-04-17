@@ -38,29 +38,33 @@
 .SkillCard {
   background-color: var(--card-background-color);
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
-  border-radius: 4px;
+  border-radius: 5px;
   padding: 1rem;
 
   display: flex;
   flex-direction: column;
   transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
 }
 
-.SkillCard__description {
+.icon {
   display: flex;
-  justify-content: space-between;
-  margin-bottom: 0.5rem;
+  justify-content: center;
+  align-items: center;
 }
 
-.SkillCard__description > h3 {
+.icon > svg {
+  width: 3rem;
+  height: 3rem;
+}
+
+.SkillCard > h3 {
   margin: 0;
   font-weight: 500;
-}
-
-.SkillCard__description > p {
-  font-size: 0.95rem;
-  margin: 0;
-  font-weight: 300;
+  letter-spacing: 2px;
 }
 
 /* projects card */

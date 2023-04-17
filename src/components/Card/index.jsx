@@ -12,14 +12,11 @@ const AboutCard = ({ icon, title }) => {
   );
 };
 
-const SkillCard = ({ title, completed }) => {
+const SkillCard = ({ title, icon }) => {
   return (
     <div className={styles.SkillCard}>
-      <div className={styles.SkillCard__description}>
-        <h3>{title}</h3>
-        <p>{completed}%</p>
-      </div>
-      <ProgressBar completed={completed} />
+      <div className={styles.icon}>{icon}</div>
+      <h3>{title}</h3>
     </div>
   );
 };
