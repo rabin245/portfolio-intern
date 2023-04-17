@@ -1,4 +1,4 @@
-import { MenuItem, MobileMenuItem, MobileThemeSwitcher } from "../MenuItem";
+import { MenuItem, MobileThemeSwitcher } from "../MenuItem";
 import styles from "./Menu.module.css";
 import { MenuToggleButton, ThemeSwitcherButton } from "../Button";
 
@@ -7,6 +7,7 @@ const MenuDesktop = ({ menuItems, darkMode, switchTheme, scrollToRef }) => (
     {menuItems.map((item) => (
       <MenuItem
         key={item.title}
+        type="desktop"
         title={item.title}
         reference={item.reference}
         scrollToRef={scrollToRef}
@@ -25,8 +26,9 @@ const MenuMobile = ({
   switchTheme,
 }) => {
   const content = menuItems.map((item) => (
-    <MobileMenuItem
+    <MenuItem
       key={item.title}
+      type="mobile"
       title={item.title}
       icon={item.icon}
       reference={item.reference}
