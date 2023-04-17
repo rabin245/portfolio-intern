@@ -4,8 +4,8 @@
 
 .wrapper {
   display: flex;
-  padding: 8rem 8rem;
-  gap: 2rem;
+  padding: 6rem 8rem;
+  justify-content: space-between;
 }
 
 .connectInfo {
@@ -29,7 +29,47 @@
   width: fit-content;
 }
 
-.ContactForm {
+.form {
   flex: 1;
-  max-width: 50%;
+}
+
+.form > h2 {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 400;
+  margin-bottom: 1rem;
+}
+
+@media only screen and (max-width: 1024px) {
+  .wrapper {
+    padding: 4rem 2rem;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .wrapper {
+    flex-direction: column;
+    padding: 2rem 1rem;
+  }
+
+  .connectInfo {
+    margin-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .connectInfo > h1 {
+    text-align: center;
+    font-size: 1.5rem;
+  }
+
+  .form {
+    max-width: 100%;
+  }
+
+  .form > h2 {
+    text-align: center;
+    font-size: 1.2rem;
+  }
 }

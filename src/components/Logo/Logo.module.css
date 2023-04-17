@@ -14,9 +14,10 @@
   text-decoration: none;
 }
 
-a:hover {
+.logo > a:hover {
   color: blueviolet;
 }
-a:visited {
+
+.logo > a:visited {
   color: inherit;
 }

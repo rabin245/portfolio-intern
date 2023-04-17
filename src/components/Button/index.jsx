@@ -2,6 +2,8 @@ import styles from "./Button.module.css";
 import ArrowUpIcon from "../../assets/icons/ArrowUpIcon";
 import SunIcon from "../../assets/icons/SunIcon";
 import MoonIcon from "../../assets/icons/MoonIcon";
+import MenuIcon from "../../assets/icons/MenuIcon";
+import CloseIcon from "../../assets/icons/CloseIcon";
 
 const Button = ({ children, handleClick }) => {
   return (
@@ -12,7 +14,7 @@ const Button = ({ children, handleClick }) => {
 };
 
 const ThemeSwitcherButton = ({ darkMode, switchTheme }) => {
-  const icon = darkMode ? <MoonIcon /> : <SunIcon />;
+  const icon = darkMode ? <SunIcon /> : <MoonIcon />;
 
   return (
     <div className={styles.themeButton} onClick={switchTheme}>
@@ -39,4 +41,26 @@ const ScrollToTopButton = ({ show }) => {
   );
 };
 
-export { Button, ThemeSwitcherButton, ScrollToTopButton };
+const MenuToggleButton = ({ toggleMenu }) => {
+  return (
+    <div className={styles.MenuToggleButton} onClick={toggleMenu}>
+      <MenuIcon />
+    </div>
+  );
+};
+
+const CloseMenuButton = ({ toggleMenu }) => {
+  return (
+    <div className={styles.CloseMenuButton} onClick={toggleMenu}>
+      <CloseIcon />
+    </div>
+  );
+};
+
+export {
+  Button,
+  ThemeSwitcherButton,
+  ScrollToTopButton,
+  MenuToggleButton,
+  CloseMenuButton,
+};

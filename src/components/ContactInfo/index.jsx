@@ -2,7 +2,7 @@ import styles from "./ContactInfo.module.css";
 
 const ContactInfo = ({ icon, title, link, linkText }) => {
   return (
-    <p className={styles.infoDiv}>
+    <div className={styles.infoDiv}>
       {icon}
       <div className={styles.info}>
         <span>{title}</span>
@@ -10,7 +10,7 @@ const ContactInfo = ({ icon, title, link, linkText }) => {
           {linkText}
         </a>
       </div>
-    </p>
+    </div>
   );
 };
 

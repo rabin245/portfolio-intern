@@ -9,11 +9,27 @@
   font-weight: bold;
   border-radius: 0.2rem;
   cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.Button > svg {
+  width: 1.5rem;
+  height: 1.5rem;
+  stroke-width: 2;
+  transition: transform 0.2s ease-in-out;
 }
 
 .Button:hover {
   background-color: #a64dff;
 }
+
+.Button:hover > svg {
+  transform: translateX(0.5rem);
+}
+
 .Button:active {
   background-color: #a64dff;
   transform: scale(0.95);
@@ -57,4 +73,30 @@
 .visible {
   opacity: 1;
   visibility: visible;
+}
+
+/* menu toggle buttons */
+.MenuToggleButton {
+  display: none;
+  cursor: pointer;
+  height: 24px;
+}
+
+.CloseMenuButton {
+  cursor: pointer;
+  height: 24px;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+}
+
+@media only screen and (max-width: 768px) {
+  .ScrollToTop {
+    right: 1rem;
+    bottom: 1rem;
+  }
+
+  .MenuToggleButton {
+    display: block;
+  }
 }

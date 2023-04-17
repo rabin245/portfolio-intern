@@ -1,14 +1,12 @@
+import MoonIcon from "../../assets/icons/MoonIcon";
+import SunIcon from "../../assets/icons/SunIcon";
 import styles from "./MenuItem.module.css";
 
-const MenuItem = ({ title, reference }) => {
-  // scrolls to the reference element
-  const scrollToRef = (ref) =>
-    window.scrollTo({ top: ref.current.offsetTop - 65, behavior: "smooth" });
+const MenuItem = ({ title, reference, scrollToRef }) => {
   return (
     <div
       className={styles.link}
       onClick={() => {
-        console.log(reference);
         scrollToRef(reference);
       }}
     >
@@ -17,4 +15,32 @@ const MenuItem = ({ title, reference }) => {
   );
 };
 
-export default MenuItem;
+const MobileMenuItem = ({ title, icon, reference, scrollToRef }) => {
+  return (
+    <div
+      className={styles.mobilelink}
+      onClick={() => {
+        scrollToRef(reference);
+      }}
+    >
+      {icon}
+      <span>{title}</span>
+    </div>
+  );
+};
+
+const MobileThemeSwitcher = ({ darkMode, switchTheme }) => {
+  return (
+    <div
+      className={styles.mobilelink}
+      onClick={() => {
+        switchTheme();
+      }}
+    >
+      {darkMode ? <SunIcon /> : <MoonIcon />}
+      <span>Theme</span>
+    </div>
+  );
+};
+
+export { MenuItem, MobileMenuItem, MobileThemeSwitcher };

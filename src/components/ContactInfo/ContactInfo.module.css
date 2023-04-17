@@ -1,9 +1,17 @@
 .infoDiv {
-  margin: 0;
   margin-bottom: 1rem;
   display: flex;
   align-items: center;
   gap: 1rem;
+  width: fit-content;
+}
+
+.infoDiv:hover {
+  transform: scale(1.1);
+}
+
+.infoDiv:hover > svg {
+  color: blueviolet;
 }
 
 .info {
@@ -28,4 +36,14 @@
 .info > a:hover {
   text-decoration: underline;
   color: blueviolet;
+}
+
+@media only screen and (max-width: 768px) {
+  .info > span {
+    font-size: 1.1rem;
+  }
+
+  .info > a {
+    font-size: 0.9rem;
+  }
 }

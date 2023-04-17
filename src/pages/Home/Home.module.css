@@ -6,7 +6,6 @@
   padding: 2rem 8rem;
   display: flex;
 }
-
 .content {
   flex: 2;
   padding: 4rem 0;
@@ -28,10 +27,50 @@
   font-size: 1.25rem;
   font-weight: 300;
   letter-spacing: 1.5px;
-  margin-right: 10rem;
 }
 
 .image {
   flex: 1;
   margin: 0 1rem;
+  filter: drop-shadow(0 0 0.1rem rgba(0, 0, 0, 0.3));
+}
+
+@media only screen and (max-width: 1024px) {
+  .wrapper {
+    flex-direction: column-reverse;
+    padding: 2rem;
+    align-items: center;
+  }
+
+  .content {
+    flex: 1;
+    padding: 2rem 0;
+  }
+
+  .content h1 {
+    font-size: 2rem;
+  }
+
+  .content .name {
+    font-size: 2rem;
+  }
+
+  .content p {
+    font-size: 1rem;
+  }
+
+  .image {
+    margin: 0;
+  }
+  .image img {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .wrapper {
+    flex-direction: column-reverse;
+    padding: 1rem;
+    align-items: center;
+  }
 }
