@@ -24,9 +24,17 @@
 }
 
 .content p {
+  margin: 1rem 0;
   font-size: 1.25rem;
   font-weight: 300;
   letter-spacing: 1.5px;
+}
+
+.socials {
+  margin: 1rem 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
 }
 
 .image {
