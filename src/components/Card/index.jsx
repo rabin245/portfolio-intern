@@ -1,4 +1,3 @@
-import ProgressBar from "../ProgressBar";
 import styles from "./Card.module.css";
 import LinkIcon from "../../assets/icons/LinkIcon";
 import GithubIcon from "../../assets/icons/GithubIcon";
