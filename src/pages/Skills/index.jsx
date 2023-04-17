@@ -6,7 +6,7 @@ import PythonIcon from "../../assets/icons/PythonIcon";
 import ReactIcon from "../../assets/icons/ReactIcon";
 import SassIcon from "../../assets/icons/SassIcon";
 import TailwindIcon from "../../assets/icons/TailwindIcons";
-import { SkillCard } from "../../components/Card";
+import { Card } from "../../components/Card";
 import styles from "./Skills.module.css";
 
 const Skills = ({ skillsRef }) => {
@@ -52,8 +52,9 @@ const Skills = ({ skillsRef }) => {
 
         <div className={styles.cards}>
           {skills.map((skill) => (
-            <SkillCard
+            <Card
               key={skill.title}
+              type="skill"
               icon={skill.icon}
               title={skill.title}
             />
