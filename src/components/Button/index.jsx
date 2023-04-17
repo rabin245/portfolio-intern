@@ -5,7 +5,19 @@ import MoonIcon from "../../assets/icons/MoonIcon";
 import MenuIcon from "../../assets/icons/MenuIcon";
 import CloseIcon from "../../assets/icons/CloseIcon";
 
-const Button = ({ children, handleClick }) => {
+const Button = ({ children, handleClick = () => {}, type = "normal" }) => {
+  if (type === "download")
+    return (
+      <a
+        href="/src/assets/cv/cv.pdf"
+        className={`${styles.Button} ${styles.DownloadButton}`}
+        download={true}
+        target="_blank"
+      >
+        {children}
+      </a>
+    );
+
   return (
     <button className={styles.Button} onClick={handleClick}>
       {children}
@@ -41,18 +53,17 @@ const ScrollToTopButton = ({ show }) => {
   );
 };
 
-const MenuToggleButton = ({ toggleMenu }) => {
+const MenuToggleButton = ({ toggleMenu, type = "burger" }) => {
+  if (type === "close")
+    return (
+      <div className={styles.CloseMenuButton} onClick={toggleMenu}>
+        <CloseIcon />
+      </div>
+    );
+
   return (
     <div className={styles.MenuToggleButton} onClick={toggleMenu}>
       <MenuIcon />
-    </div>
-  );
-};
-
-const CloseMenuButton = ({ toggleMenu }) => {
-  return (
-    <div className={styles.CloseMenuButton} onClick={toggleMenu}>
-      <CloseIcon />
     </div>
   );
 };
@@ -70,25 +81,10 @@ const SocialButton = ({ icon, link }) => {
   );
 };
 
-const DownloadButton = ({ children }) => {
-  return (
-    <a
-      href="/src/assets/cv/cv.pdf"
-      className={`${styles.Button} ${styles.DownloadButton}`}
-      download={true}
-      target="_blank"
-    >
-      {children}
-    </a>
-  );
-};
-
 export {
   Button,
   ThemeSwitcherButton,
   ScrollToTopButton,
   MenuToggleButton,
-  CloseMenuButton,
   SocialButton,
-  DownloadButton,
 };

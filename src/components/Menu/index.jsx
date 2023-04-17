@@ -1,10 +1,6 @@
 import { MenuItem, MobileMenuItem, MobileThemeSwitcher } from "../MenuItem";
 import styles from "./Menu.module.css";
-import {
-  CloseMenuButton,
-  MenuToggleButton,
-  ThemeSwitcherButton,
-} from "../Button";
+import { MenuToggleButton, ThemeSwitcherButton } from "../Button";
 
 const MenuDesktop = ({ menuItems, darkMode, switchTheme, scrollToRef }) => (
   <div className={styles.menuDesktop}>
@@ -41,7 +37,7 @@ const MenuMobile = ({
   return (
     <div className={`${styles.menuMobile} ${isOpen && styles.open}`}>
       <div className={styles.wrapper}>
-        <CloseMenuButton toggleMenu={toggleMenu} />
+        <MenuToggleButton type="close" toggleMenu={toggleMenu} />
         <div className={styles.menuMobileContent}>
           {content}
           <MobileThemeSwitcher darkMode={darkMode} switchTheme={switchTheme} />
