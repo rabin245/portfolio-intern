@@ -6,7 +6,7 @@ import MapIcon from "../../assets/icons/MapIcon";
 import FindMeIcon from "../../assets/icons/FindMeIcon";
 import FormInput from "../../components/FormInput";
 import { Button } from "../../components/Button";
-import ContactInfo from "../../components/ContactInfo";
+import { ContactInfo } from "../../components/Card";
 import SendIcon from "../../assets/icons/SendIcon";
 
 const ContactForm = ({ inputs, handleChange, handleSubmit }) => {
