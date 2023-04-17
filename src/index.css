@@ -55,6 +55,17 @@ body {
   padding: 0.5rem 8rem;
 }
 
+.Footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem 0;
+  background-color: blueviolet;
+
+  font-size: 0.8rem;
+  letter-spacing: 0.05rem;
+}
+
 @media only screen and (max-width: 1024px) {
   .Header > nav {
     padding: 0.5rem 2rem;

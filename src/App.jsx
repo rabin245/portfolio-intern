@@ -62,6 +62,10 @@ const Header = ({
   );
 };
 
+const Footer = () => {
+  return <div className="Footer">&copy; All rights reserved.</div>;
+};
+
 function App() {
   const homeRef = useRef(null);
   const aboutRef = useRef(null);
@@ -108,6 +112,7 @@ function App() {
       <Projects projectsRef={projectsRef} />
       <Contact contactRef={contactRef} />
       {!isMenuOpen && <ScrollToTopButton show={showScrollToTop} />}
+      <Footer />
     </div>
   );
 }
