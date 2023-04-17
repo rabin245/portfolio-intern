@@ -1,10 +1,33 @@
 import styles from "./Home.module.css";
 import Image from "../../assets/images/banner-image.png";
-import { Button } from "../../components/Button";
+import { Button, SocialButton } from "../../components/Button";
+import GithubIcon from "../../assets/icons/GithubIcon";
+import LinkedinIcon from "../../assets/icons/LinkedinIcon";
+import TwitterIcon from "../../assets/icons/TwitterIcon";
+import InstagramIcon from "../../assets/icons/InstagramIcon";
 
 const Home = ({ homeRef, contactRef }) => {
   const scrollToRef = (ref) =>
     window.scrollTo({ top: ref.current.offsetTop, behavior: "smooth" });
+
+  const socials = [
+    {
+      icon: <GithubIcon />,
+      link: "https://github.com/rabin245/",
+    },
+    {
+      icon: <LinkedinIcon />,
+      link: "https://www.linkedin.com/in/rabindra-baisnab",
+    },
+    {
+      icon: <TwitterIcon />,
+      link: "https://twitter.com/_zaxiya",
+    },
+    {
+      icon: <InstagramIcon />,
+      link: "https://www.instagram.com/_zaxiya/",
+    },
+  ];
 
   return (
     <div className={styles.Home} ref={homeRef}>
@@ -17,6 +40,11 @@ const Home = ({ homeRef, contactRef }) => {
             Full Stack Web Developer with a passion for building responsive
             websites and web applications.
           </p>
+          <div className={styles.socials}>
+            {socials.map((info) => (
+              <SocialButton key={info.link} icon={info.icon} link={info.link} />
+            ))}
+          </div>
           <div>
             <Button handleClick={() => scrollToRef(contactRef)}>Hire me</Button>
           </div>

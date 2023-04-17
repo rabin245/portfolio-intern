@@ -90,6 +90,31 @@
   right: 1rem;
 }
 
+.SocialButton {
+  cursor: pointer;
+  padding: 0.3rem;
+  border-radius: 50%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--text-color);
+}
+
+.SocialButton:hover {
+  background-color: blueviolet;
+  color: white !important;
+}
+
+.SocialButton:visited {
+  color: inherit;
+}
+
+.SocialButton > svg {
+  width: 1.75rem !important;
+  height: 1.75rem !important;
+}
+
 @media only screen and (max-width: 768px) {
   .ScrollToTop {
     right: 1rem;
@@ -99,4 +124,10 @@
   .MenuToggleButton {
     display: block;
   }
+}
+
+.test {
+  border: solid 1px red;
+  padding: 1rem;
+  color: green;
 }
