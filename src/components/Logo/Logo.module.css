@@ -2,10 +2,19 @@
 
 .logo {
   font-family: "Alkatra";
-  font-size: 1.5rem;
   cursor: pointer;
 }
 
-.logo:hover {
-  color: #f00;
+.logo:hover > a {
+  color: blueviolet;
+}
+
+.logo > a {
+  font-size: 1.5rem;
+  text-decoration: none;
+}
+
+.logo > a:visited,
+.logo > a:active {
+  color: inherit;
 }

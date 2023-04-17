@@ -4,12 +4,85 @@
   font-weight: 400;
 
   color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
+
+  --background-color: #f9f9f9;
+  --text-color: #242424;
+  --secondary-background-color: #dcdcdc;
+  --card-background-color: #eaeaea;
+  --bar-background-color: #cdcdcd;
+  --download-button-color: blueviolet;
+  color: var(--text-color);
+}
+
+.dark {
+  --background-color: #242424;
+  --text-color: #ffffffde;
+  --secondary-background-color: #121111;
+  --card-background-color: #323131;
+  --bar-background-color: #dcdcdc;
+  --download-button-color: #ffffffde;
+}
+
+body {
+  background-color: var(--background-color);
+
+  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+  margin: 0;
+}
+
+.Header {
+  min-height: fit-content;
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  transition: color 0.2s ease-in-out;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+  backdrop-filter: blur(10px);
+  --webkit-backdrop-filter: blur(10px);
+}
+
+.Header > nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 8rem;
+}
+
+.Footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem 0;
+  background-color: blueviolet;
+
+  font-size: 0.8rem;
+  letter-spacing: 0.05rem;
+  color: white;
+}
+
+@media only screen and (max-width: 1024px) {
+  .Header > nav {
+    padding: 0.5rem 2rem;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .Header {
+    background-color: var(--background-color);
+    backdrop-filter: none;
+    --webkit-backdrop-filter: none;
+  }
+
+  .Header > nav {
+    padding: 0.5rem 1rem;
+  }
 }

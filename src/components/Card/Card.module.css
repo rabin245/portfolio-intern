@@ -1,0 +1,304 @@
+/* about card */
+.AboutCard {
+  background-color: var(--card-background-color);
+  border-radius: 4px;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  height: 10rem;
+  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+  padding: 1rem;
+}
+
+.AboutCard:hover {
+  background-color: blueviolet;
+  color: white;
+  transform: rotate(10deg);
+}
+
+.AboutCard__icon {
+  width: fit-content;
+}
+
+.AboutCard:hover .AboutCard__icon {
+  transform: rotate(-25deg) translate(15px, -30px);
+}
+
+.AboutCard__title {
+  margin: 0;
+  font-weight: 400;
+  font-size: 1.25rem;
+  letter-spacing: 1.5px;
+  width: 80%;
+}
+
+/* skills card */
+
+.SkillCard {
+  background-color: var(--card-background-color);
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  padding: 1rem;
+
+  display: flex;
+  flex-direction: column;
+  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.SkillCard__icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.SkillCard__icon > svg {
+  width: 3rem;
+  height: 3rem;
+}
+
+.SkillCard:hover .SkillCard__icon > svg {
+  animation: spin 2s ease-in-out infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(360deg);
+  }
+
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.SkillCard > h3 {
+  margin: 0;
+  font-weight: 500;
+  letter-spacing: 2px;
+}
+
+/* projects card */
+
+.ProjectCard {
+  position: relative;
+  overflow: hidden;
+}
+
+.ProjectCard:nth-child(even) {
+  transform: translateY(3rem);
+}
+
+.ProjectCard__image {
+}
+
+.ProjectCard__image > img {
+  object-fit: cover;
+  width: 100%;
+}
+
+.ProjectCard__desc {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.7;
+  background-color: #000;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+
+  transform: translateX(-100%);
+  transition: transform 0.3s ease-in-out;
+}
+
+.ProjectCard:hover .ProjectCard__desc {
+  transform: translateX(0);
+}
+
+.ProjectCard__title {
+  font-size: 1.5rem;
+  font-weight: 300;
+  color: #fff;
+  margin: 0;
+}
+
+.ProjectCard__icons {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+
+.ProjectCard__linkIcon {
+  border-radius: 50%;
+  border: 3px solid white;
+  padding: 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white !important;
+}
+
+.ProjectCard__linkIcon:hover {
+  background-color: #fff;
+  color: black !important;
+}
+
+/* contactinfo card */
+.infoDiv {
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  width: fit-content;
+}
+
+.infoDiv:hover {
+  transform: scale(1.1);
+}
+
+.infoDiv:hover > svg {
+  color: blueviolet;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+}
+
+.info > span {
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+.info > a {
+  text-decoration: none;
+  color: var(--text-color);
+  font-weight: 400;
+  opacity: 0.8;
+
+  transition: color 0.2s ease-in-out;
+}
+
+.info > a:hover {
+  text-decoration: underline;
+  color: blueviolet;
+}
+
+@media only screen and (max-width: 1024px) {
+  /* about card */
+  .AboutCard {
+    height: 8rem;
+  }
+
+  .AboutCard:hover .AboutCard__icon {
+    transform: rotate(-25deg) translate(10px, -20px);
+  }
+
+  .AboutCard__title {
+    font-size: 1rem;
+  }
+
+  /* skills card */
+  .SkillCard {
+    padding: 0.5rem;
+  }
+
+  .SkillCard__icon > svg {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+
+  .SkillCard > h3 {
+    font-size: 0.85rem;
+    font-weight: 400;
+  }
+
+  /* projects card */
+  .ProjectCard:nth-child(even) {
+    transform: translateY(2rem);
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  /* about card */
+  .AboutCard {
+    height: 6rem;
+    gap: 0.75rem;
+  }
+
+  .AboutCard:hover .AboutCard__icon {
+    transform: rotate(-25deg) translate(5px, -10px);
+  }
+
+  .AboutCard__title {
+    font-size: 0.75rem;
+    text-align: start;
+  }
+
+  .AboutCard__icon svg {
+    width: 1.8rem;
+    height: 1.8rem;
+    stroke-width: 1.5;
+  }
+
+  /* skills card */
+  .SkillCard__icon {
+    width: 2.25rem;
+    height: 2.25rem;
+  }
+
+  .SkillCard > h3 {
+    font-size: 0.75rem;
+  }
+
+  /* projects card */
+  .ProjectCard:nth-child(even) {
+    transform: none;
+  }
+
+  /* contactinfo card */
+  .info > span {
+    font-size: 1.1rem;
+  }
+
+  .info > a {
+    font-size: 0.9rem;
+  }
+}
+
+@media only screen and (max-width: 350px) {
+  /* about card */
+  .AboutCard {
+    height: 6rem;
+    width: max-content;
+    margin: auto;
+  }
+
+  .AboutCard:hover .AboutCard__icon {
+    transform: rotate(-25deg) translate(10px, -20px);
+  }
+
+  .AboutCard__title {
+    width: 100%;
+  }
+
+  /* projects card */
+  .ProjectCard__title {
+    font-size: 1.25rem;
+  }
+
+  .ProjectCard__icons {
+    gap: 0.5rem;
+  }
+}

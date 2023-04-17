@@ -1,7 +1,3 @@
-import styles from "./Logo.module.css";
-
-const Logo = () => {
-  return <div className={styles.logo}>Rabin</div>;
-};
+import Logo from "./Logo";
 
 export default Logo;

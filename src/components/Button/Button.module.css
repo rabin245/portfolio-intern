@@ -1,0 +1,170 @@
+.Button {
+  outline: 0;
+  border: 0;
+
+  background-color: blueviolet;
+  padding: 1rem 2rem;
+  color: white;
+  font-weight: bold;
+  border-radius: 0.35rem;
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.Button > span {
+  font-size: 1rem;
+}
+
+.Button > svg {
+  width: 1.5rem;
+  height: 1.5rem;
+  stroke-width: 2;
+  transition: transform 0.2s ease-in-out;
+}
+
+.Button:hover {
+  opacity: 0.9;
+  box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.2);
+}
+
+.Button:hover > svg {
+  transform: translateX(0.5rem);
+}
+
+.Button:active {
+  background-color: #a64dff;
+  transform: scale(0.95);
+}
+
+/* Theme switcher button */
+.themeButton {
+  cursor: pointer;
+  height: 24px;
+}
+
+/* scroll button */
+.ScrollToTop {
+  position: fixed;
+  right: 2.5rem;
+  bottom: 2rem;
+  z-index: 100;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  padding: 10px;
+  border-radius: 5px;
+
+  background-color: blueviolet;
+  cursor: pointer;
+  color: white;
+  transition: all 0.2s ease-in-out;
+
+  opacity: 0;
+  visibility: hidden;
+}
+
+.ScrollToTop:hover {
+  background-color: #a64dff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+}
+
+.visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* menu toggle buttons */
+.MenuToggleButton {
+  display: none;
+  cursor: pointer;
+  height: 24px;
+}
+
+.CloseMenuButton {
+  cursor: pointer;
+  height: 24px;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+}
+
+.SocialButton {
+  cursor: pointer;
+  padding: 0.3rem;
+  border-radius: 50%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--text-color);
+}
+
+.SocialButton:hover {
+  background-color: blueviolet;
+  color: white !important;
+}
+
+.SocialButton:visited {
+  color: inherit;
+}
+
+.SocialButton > svg {
+  width: 1.75rem !important;
+  height: 1.75rem !important;
+}
+
+.DownloadButton {
+  cursor: pointer;
+  padding: 1rem;
+  text-decoration: none;
+
+  background-color: transparent;
+  border: var(--download-button-color) solid 2px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--download-button-color);
+}
+
+.DownloadButton:hover {
+  border-color: blueviolet;
+  background-color: blueviolet;
+  color: white;
+}
+
+.DownloadButton > span {
+  font-weight: 500;
+}
+
+.DownloadButton > svg {
+  width: inherit !important;
+  height: inherit !important;
+}
+
+.DownloadButton:hover > svg {
+  transform: translateY(0.3rem);
+}
+
+@media only screen and (max-width: 768px) {
+  .ScrollToTop {
+    right: 1rem;
+    bottom: 1rem;
+  }
+
+  .MenuToggleButton {
+    display: block;
+  }
+}
+
+.test {
+  border: solid 1px red;
+  padding: 1rem;
+  color: green;
+}

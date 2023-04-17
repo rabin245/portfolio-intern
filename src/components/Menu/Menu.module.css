@@ -1,5 +1,50 @@
-.menu {
+.menuDesktop {
   display: flex;
   flex-direction: row;
-  gap: 1rem;
+  gap: 2rem;
+  align-items: center;
+}
+
+.menuMobile {
+  position: fixed;
+  margin: auto;
+  height: 100vh;
+  width: 50vw;
+  top: 0;
+  right: -100%;
+  z-index: 1000;
+  background-color: var(--card-background-color);
+  opacity: 0.9;
+
+  transition: right 0.4s ease-in-out;
+}
+
+.open {
+  right: 0;
+}
+
+.wrapper {
+  position: relative;
+  height: 100%;
+  padding: 1rem;
+}
+
+.menuMobileContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.3rem;
+  height: 100%;
+}
+
+@media only screen and (max-width: 768px) {
+  .menuDesktop {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .menuMobile {
+    width: 80vw;
+  }
 }

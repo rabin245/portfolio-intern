@@ -1,0 +1,38 @@
+.FormInput {
+  display: flex;
+  flex-direction: column;
+  border-radius: 5px;
+  background-color: var(--secondary-background-color);
+  padding: 0.75rem 0 0.75rem 0.75rem;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+
+  transition: all 0.2s ease-in-out;
+}
+
+.FormInput:focus-within {
+  box-shadow: 0 0 0 2px blueviolet;
+}
+
+.FormInput > span {
+  color: var(--text-color);
+  opacity: 0.6;
+  font-size: 1rem;
+  font-weight: 300;
+  margin-bottom: 0.5rem;
+  transition: color 0.2s ease-in-out;
+}
+
+.input {
+  background-color: transparent;
+  border: none;
+  outline: 0;
+  font-size: 1rem;
+  font-weight: 300;
+  color: var(--text-color);
+  opacity: 0.9;
+  transition: color 0.2s ease-in-out;
+}
+
+.input:focus {
+  color: blueviolet;
+}
