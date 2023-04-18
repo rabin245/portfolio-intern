@@ -6,30 +6,13 @@ import { ContactInfo } from "../../components/Card";
 import SendIcon from "../../assets/icons/SendIcon";
 import data from "../../assets/data/data.json";
 
-const ContactForm = ({ inputs, handleChange, handleSubmit }) => {
+const ContactForm = ({ formInputs, handleChange, handleSubmit }) => {
   return (
     <div className={styles.ContactForm}>
       <form action="">
-        <FormInput
-          fieldName="Name"
-          name="name"
-          value={inputs.name}
-          handleChange={handleChange}
-        />
-        <FormInput
-          fieldName="Email"
-          name="email"
-          type="email"
-          value={inputs.email}
-          handleChange={handleChange}
-        />
-        <FormInput
-          fieldName="Message"
-          name="message"
-          value={inputs.message}
-          isMessage={true}
-          handleChange={handleChange}
-        />
+        {formInputs.map((input) => (
+          <FormInput key={input.name} handleChange={handleChange} {...input} />
+        ))}
 
         <div className={styles.button}>
           <Button handleClick={handleSubmit}>
@@ -88,6 +71,27 @@ const Contact = ({ contactRef }) => {
 
     loadContactInfo();
   }, []);
+
+  const formInputs = [
+    {
+      fieldName: "Name",
+      name: "name",
+      value: inputs.name,
+    },
+    {
+      fieldName: "Email",
+      name: "email",
+      type: "email",
+      value: inputs.email,
+    },
+    {
+      fieldName: "Message",
+      name: "message",
+      value: inputs.message,
+      isMessage: true,
+    },
+  ];
+
   return (
     <div className={styles.Contact} ref={contactRef}>
       <div className={styles.wrapper}>
@@ -104,7 +108,7 @@ const Contact = ({ contactRef }) => {
           <h2>Get in touch</h2>
 
           <ContactForm
-            inputs={inputs}
+            formInputs={formInputs}
             handleChange={handleChange}
             handleSubmit={handleSubmit}
           />
