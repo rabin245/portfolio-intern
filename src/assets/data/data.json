@@ -9,7 +9,7 @@
       "image": "/src/assets/images/project-electiondapp.png",
       "title": "Election Voting Dapp",
       "link": "https://electiondapp.onrender.com/",
-      "github": "https://github.com/rabin245/election_ui#"
+      "github": "https://github.com/rabin245/election_ui"
     },
     {
       "image": "/src/assets/images/project-blogapp.png",
@@ -21,6 +21,40 @@
       "title": "Quizzical",
       "link": "https://rabin245.github.io/quizzical/",
       "github": "https://github.com/rabin245/quizzical"
+    }
+  ],
+  "skills": [
+    {
+      "title": "HTML",
+      "icon": "HtmlIcon"
+    },
+    {
+      "title": "CSS",
+      "icon": "CssIcon"
+    },
+    {
+      "title": "JavaScript",
+      "icon": "JavascriptIcon"
+    },
+    {
+      "title": "Python",
+      "icon": "PythonIcon"
+    },
+    {
+      "title": "React",
+      "icon": "ReactIcon"
+    },
+    {
+      "title": "SASS",
+      "icon": "SassIcon"
+    },
+    {
+      "title": "TailwindCSS",
+      "icon": "TailwindIcon"
+    },
+    {
+      "title": "Bootstrap",
+      "icon": "BootstrapIcon"
     }
   ]
 }
