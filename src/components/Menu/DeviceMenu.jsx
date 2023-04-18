@@ -22,7 +22,10 @@ const DeviceMenu = ({
       menuItems={menuItems}
       isOpen={isOpen}
       toggleMenu={toggleMenu}
-      scrollToRef={scrollToRef}
+      scrollToRef={(ref) => {
+        scrollToRef(ref);
+        toggleMenu();
+      }}
       darkMode={darkMode}
       switchTheme={switchTheme}
     />
