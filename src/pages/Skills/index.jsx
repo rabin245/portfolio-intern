@@ -2,27 +2,13 @@ import { Card } from "../../components/Card";
 import styles from "./Skills.module.css";
 import data from "../../assets/data/data.json";
 import { useEffect, useState } from "react";
+import loader from "../../utils/IconLoader";
 
 const Skills = ({ skillsRef }) => {
   const [skills, setSkills] = useState([]);
 
   useEffect(() => {
-    const loadSkills = async () => {
-      const skills = await Promise.all(
-        data.skills.map(async (skill, index) => {
-          const IconComponent = (
-            await import(`../../assets/icons/${skill.icon}.jsx`)
-          ).default;
-          return {
-            ...skill,
-            icon: <IconComponent key={index} />,
-          };
-        })
-      );
-      setSkills(skills);
-    };
-
-    loadSkills();
+    loader(data.skills).then((data) => setSkills(data));
   }, []);
 
   return (

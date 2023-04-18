@@ -5,6 +5,7 @@ import { Button } from "../../components/Button";
 import { ContactInfo } from "../../components/Card";
 import SendIcon from "../../assets/icons/SendIcon";
 import data from "../../assets/data/data.json";
+import loader from "../../utils/IconLoader";
 
 const ContactForm = ({ formInputs, handleChange, handleSubmit }) => {
   return (
@@ -54,22 +55,7 @@ const Contact = ({ contactRef }) => {
   const [contactInfo, setContactInfo] = useState([]);
 
   useEffect(() => {
-    const loadContactInfo = async () => {
-      const contactInfo = await Promise.all(
-        data.contact.map(async (info, index) => {
-          const IconComponent = (
-            await import(`../../assets/icons/${info.icon}.jsx`)
-          ).default;
-          return {
-            ...info,
-            icon: <IconComponent key={index} />,
-          };
-        })
-      );
-      setContactInfo(contactInfo);
-    };
-
-    loadContactInfo();
+    loader(data.contact).then((data) => setContactInfo(data));
   }, []);
 
   const formInputs = [

@@ -4,6 +4,7 @@ import { Button, SocialButton } from "../../components/Button";
 import DownloadIcon from "../../assets/icons/DownloadIcon";
 import data from "../../assets/data/data.json";
 import { useState, useEffect } from "react";
+import loader from "../../utils/IconLoader";
 
 const Home = ({ homeRef, contactRef }) => {
   const scrollToRef = (ref) =>
@@ -12,22 +13,7 @@ const Home = ({ homeRef, contactRef }) => {
   const [socials, setSocials] = useState([]);
 
   useEffect(() => {
-    const loadSocials = async () => {
-      const socials = await Promise.all(
-        data.socials.map(async (social, index) => {
-          const IconComponent = (
-            await import(`../../assets/icons/${social.icon}.jsx`)
-          ).default;
-          return {
-            ...social,
-            icon: <IconComponent key={index} />,
-          };
-        })
-      );
-      setSocials(socials);
-    };
-
-    loadSocials();
+    loader(data.socials).then((data) => setSocials(data));
   }, []);
 
   return (
