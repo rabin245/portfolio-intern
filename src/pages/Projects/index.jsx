@@ -1,36 +1,17 @@
 import styles from "./Projects.module.css";
-import PortfolioImage from "../../assets/images/project-portfolio.png";
-import ElectionDappImage from "../../assets/images/project-electiondapp.png";
-import BlogImage from "../../assets/images/project-blogapp.png";
-import QuizImage from "../../assets/images/project-quizzical.png";
 import { ProjectCard } from "../../components/Card";
 import ArrowRightIcon from "../../assets/icons/ArrowRightIcon";
+import projectData from "../../assets/data/data.json";
+import { useState, useEffect } from "react";
 
 const Projects = ({ projectsRef }) => {
-  const projects = [
-    {
-      image: PortfolioImage,
-      title: "Portfolio",
-      github: "https://github.com/rabin245/portfolio-intern",
-    },
-    {
-      image: ElectionDappImage,
-      title: "Election Voting Dapp",
-      link: "https://electiondapp.onrender.com/",
-      github: "https://github.com/rabin245/election_ui#",
-    },
-    {
-      image: BlogImage,
-      title: "Blog App",
-      github: "https://github.com/rabin245/blog_app_frontend",
-    },
-    {
-      image: QuizImage,
-      title: "Quizzical",
-      link: "https://rabin245.github.io/quizzical/",
-      github: "https://github.com/rabin245/quizzical",
-    },
-  ];
+  const [projects, setProjects] = useState([]);
+
+  useEffect(() => {
+    const data = projectData.projects;
+
+    setProjects(data);
+  }, []);
 
   return (
     <div className={styles.Projects} ref={projectsRef}>
