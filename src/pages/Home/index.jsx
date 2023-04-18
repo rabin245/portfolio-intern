@@ -1,34 +1,34 @@
 import styles from "./Home.module.css";
 import Image from "../../assets/images/banner-image.png";
 import { Button, SocialButton } from "../../components/Button";
-import GithubIcon from "../../assets/icons/GithubIcon";
-import LinkedinIcon from "../../assets/icons/LinkedinIcon";
-import TwitterIcon from "../../assets/icons/TwitterIcon";
-import InstagramIcon from "../../assets/icons/InstagramIcon";
 import DownloadIcon from "../../assets/icons/DownloadIcon";
+import data from "../../assets/data/data.json";
+import { useState, useEffect } from "react";
 
 const Home = ({ homeRef, contactRef }) => {
   const scrollToRef = (ref) =>
     window.scrollTo({ top: ref.current.offsetTop, behavior: "smooth" });
 
-  const socials = [
-    {
-      icon: <GithubIcon />,
-      link: "https://github.com/rabin245/",
-    },
-    {
-      icon: <LinkedinIcon />,
-      link: "https://www.linkedin.com/in/rabindra-baisnab",
-    },
-    {
-      icon: <TwitterIcon />,
-      link: "https://twitter.com/_zaxiya",
-    },
-    {
-      icon: <InstagramIcon />,
-      link: "https://www.instagram.com/_zaxiya/",
-    },
-  ];
+  const [socials, setSocials] = useState([]);
+
+  useEffect(() => {
+    const loadSocials = async () => {
+      const socials = await Promise.all(
+        data.socials.map(async (social, index) => {
+          const IconComponent = (
+            await import(`../../assets/icons/${social.icon}.jsx`)
+          ).default;
+          return {
+            ...social,
+            icon: <IconComponent key={index} />,
+          };
+        })
+      );
+      setSocials(socials);
+    };
+
+    loadSocials();
+  }, []);
 
   return (
     <div className={styles.Home} ref={homeRef}>

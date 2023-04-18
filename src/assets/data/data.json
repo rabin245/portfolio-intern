@@ -56,5 +56,51 @@
       "title": "Bootstrap",
       "icon": "BootstrapIcon"
     }
+  ],
+  "socials": [
+    {
+      "icon": "GithubIcon",
+      "link": "https://github.com/rabin245/"
+    },
+    {
+      "icon": "LinkedinIcon",
+      "link": "https://www.linkedin.com/in/rabindra-baisnab/"
+    },
+    {
+      "icon": "TwitterIcon",
+      "link": "https://twitter.com/_zaxiya"
+    },
+    {
+      "icon": "InstagramIcon",
+      "link": "https://www.instagram.com/_zaxiya/"
+    }
+  ],
+  "contact": [
+    {
+      "title": "Call me",
+      "icon": "PhoneIcon",
+      "link": "tel:+9779762875880",
+      "linkText": "+977-9762875880"
+    },
+    {
+      "title": "Email me",
+      "icon": "MailIcon",
+
+      "link": "mailto:drarabin@gmail.com",
+      "linkText": "drarabin@gmail.com"
+    },
+    {
+      "title": "Find me on",
+      "icon": "FindMeIcon",
+      "link": "https://www.linkedin.com/in/rabindra-baisnab/",
+      "linkText": "Linkedin"
+    },
+    {
+      "title": "Address",
+
+      "icon": "MapIcon",
+      "link": "https://goo.gl/maps/N9qLMN2MeFWjK5UF6",
+      "linkText": "Chundevi, Bhaktapur"
+    }
   ]
 }

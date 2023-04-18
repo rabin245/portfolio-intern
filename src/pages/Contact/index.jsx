@@ -1,13 +1,10 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import styles from "./Contact.module.css";
-import PhoneIcon from "../../assets/icons/PhoneIcon";
-import MailIcon from "../../assets/icons/MailIcon";
-import MapIcon from "../../assets/icons/MapIcon";
-import FindMeIcon from "../../assets/icons/FindMeIcon";
 import FormInput from "../../components/FormInput";
 import { Button } from "../../components/Button";
 import { ContactInfo } from "../../components/Card";
 import SendIcon from "../../assets/icons/SendIcon";
+import data from "../../assets/data/data.json";
 
 const ContactForm = ({ inputs, handleChange, handleSubmit }) => {
   return (
@@ -71,33 +68,26 @@ const Contact = ({ contactRef }) => {
     console.log("Submitted", inputs);
   };
 
-  const contactInfo = [
-    {
-      icon: <PhoneIcon size={40} />,
-      title: "Call me",
-      link: "tel:+9779762875880",
-      linkText: "+977-9762875880",
-    },
-    {
-      icon: <MailIcon size={40} />,
-      title: "Email me",
-      link: "mailto:drarabin@gmail.com",
-      linkText: "drarabin@gmail.com",
-    },
-    {
-      icon: <FindMeIcon size={40} />,
-      title: "Find me on",
-      link: "https://www.linkedin.com/in/rabindra-baisnab/",
-      linkText: "Linkedin",
-    },
-    {
-      icon: <MapIcon size={40} />,
-      title: "Address",
-      link: "https://goo.gl/maps/N9qLMN2MeFWjK5UF6",
-      linkText: "Chundevi, Bhaktapur",
-    },
-  ];
+  const [contactInfo, setContactInfo] = useState([]);
 
+  useEffect(() => {
+    const loadContactInfo = async () => {
+      const contactInfo = await Promise.all(
+        data.contact.map(async (info, index) => {
+          const IconComponent = (
+            await import(`../../assets/icons/${info.icon}.jsx`)
+          ).default;
+          return {
+            ...info,
+            icon: <IconComponent key={index} />,
+          };
+        })
+      );
+      setContactInfo(contactInfo);
+    };
+
+    loadContactInfo();
+  }, []);
   return (
     <div className={styles.Contact} ref={contactRef}>
       <div className={styles.wrapper}>

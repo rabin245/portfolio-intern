@@ -1,9 +1,9 @@
-const MailIcon = ({ size }) => (
+const MailIcon = () => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     className="icon icon-tablcer icon-tabler-mail"
-    width={size}
-    height={size}
+    width={40}
+    height={40}
     viewBox="0 0 24 24"
     strokeWidth="1.75"
     stroke="currentColor"
