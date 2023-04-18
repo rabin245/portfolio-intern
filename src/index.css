@@ -15,9 +15,7 @@
   --text-color: #242424;
   --secondary-background-color: #dcdcdc;
   --card-background-color: #eaeaea;
-  --bar-background-color: #cdcdcd;
   --download-button-color: blueviolet;
-  color: var(--text-color);
 }
 
 .dark {
@@ -25,15 +23,17 @@
   --text-color: #ffffffde;
   --secondary-background-color: #121111;
   --card-background-color: #323131;
-  --bar-background-color: #dcdcdc;
   --download-button-color: #ffffffde;
 }
 
 body {
-  background-color: var(--background-color);
-
-  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
   margin: 0;
+}
+
+.App {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
 }
 
 .Header {

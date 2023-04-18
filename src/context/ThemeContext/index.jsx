@@ -3,9 +3,15 @@ import { createContext, useState, useEffect } from "react";
 export const ThemeContext = createContext();
 
 export const ThemeProvider = ({ children }) => {
-  const [darkMode, setDarkMode] = useState(
-    () => localStorage.getItem("theme") === "dark"
-  );
+  const [darkMode, setDarkMode] = useState(() => {
+    const storedTheme = localStorage.getItem("theme");
+    if (storedTheme !== null) {
+      console.log("storedTheme", storedTheme);
+      return storedTheme === "dark";
+    }
+
+    return window.matchMedia("(prefers-color-scheme: dark)").matches;
+  });
 
   const switchTheme = () => {
     const root = document.documentElement;
@@ -32,6 +38,11 @@ export const ThemeProvider = ({ children }) => {
       localStorage.theme = "light";
     }
   }, [darkMode]);
+
+  // useEffect(() => {
+  // document.body.style.transition =
+  //   "background-color 0.2s ease-in-out, color 0.2s ease-in-out";
+  // }, []);
 
   return (
     <ThemeContext.Provider value={{ darkMode, switchTheme }}>
