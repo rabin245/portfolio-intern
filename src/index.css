@@ -3,14 +3,14 @@
   line-height: 1.5;
   font-weight: 400;
 
-  color-scheme: light dark;
-
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
+}
 
+/* :root.light {
   --background-color: #f9f9f9;
   --text-color: #242424;
   --secondary-background-color: #dcdcdc;
@@ -18,14 +18,13 @@
   --download-button-color: blueviolet;
 }
 
-.dark {
+:root.dark {
   --background-color: #242424;
   --text-color: #ffffffde;
   --secondary-background-color: #121111;
   --card-background-color: #323131;
   --download-button-color: #ffffffde;
-}
-
+} */
 body {
   margin: 0;
 }
