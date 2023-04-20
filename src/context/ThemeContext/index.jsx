@@ -6,7 +6,6 @@ export const ThemeProvider = ({ children }) => {
   const [darkMode, setDarkMode] = useState(() => {
     const storedTheme = localStorage.getItem("theme");
     if (storedTheme !== null) {
-      console.log("storedTheme", storedTheme);
       return storedTheme === "dark";
     }
 
@@ -15,7 +14,6 @@ export const ThemeProvider = ({ children }) => {
 
   const switchTheme = () => {
     const root = document.documentElement;
-    root.classList.toggle("dark");
 
     setDarkMode((prev) => {
       localStorage.theme = prev ? "light" : "dark";
@@ -31,18 +29,13 @@ export const ThemeProvider = ({ children }) => {
       (!("theme" in localStorage) &&
         window.matchMedia("(prefers-color-scheme: dark)").matches)
     ) {
-      root.classList.add("dark");
+      root.className = "dark";
       localStorage.theme = "dark";
     } else {
-      root.classList.remove("dark");
+      root.className = "light";
       localStorage.theme = "light";
     }
   }, [darkMode]);
-
-  // useEffect(() => {
-  // document.body.style.transition =
-  //   "background-color 0.2s ease-in-out, color 0.2s ease-in-out";
-  // }, []);
 
   return (
     <ThemeContext.Provider value={{ darkMode, switchTheme }}>
@@ -50,3 +43,22 @@ export const ThemeProvider = ({ children }) => {
     </ThemeContext.Provider>
   );
 };
+
+// export const ThemeContext = createContext("light");
+
+// export function ThemeProvider({ children }) {
+//   const [theme, setTheme] = useState(globalThis.window?.__theme || "light");
+//   const toggleTheme = () => {
+//     globalThis.window.__setPreferredTheme(theme === "light" ? "dark" : "light");
+//   };
+
+//   useEffect(() => {
+//     globalThis.window.__onThemeChange = setTheme;
+//   }, []);
+
+//   return (
+//     <ThemeContext.Provider value={{ theme, toggleTheme }}>
+//       {children}
+//     </ThemeContext.Provider>
+//   );
+// }
