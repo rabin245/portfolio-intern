@@ -27,11 +27,17 @@ body {
   left: 0;
   right: 0;
   z-index: 10;
-  transition: color 0.2s ease-in-out;
+  transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 
   backdrop-filter: blur(10px);
   --webkit-backdrop-filter: blur(10px);
+}
+
+.opaque {
+  background-color: var(--background-color);
+  backdrop-filter: none;
+  --webkit-backdrop-filter: none;
 }
 
 .Header > nav {
