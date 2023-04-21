@@ -43,22 +43,3 @@ export const ThemeProvider = ({ children }) => {
     </ThemeContext.Provider>
   );
 };
-
-// export const ThemeContext = createContext("light");
-
-// export function ThemeProvider({ children }) {
-//   const [theme, setTheme] = useState(globalThis.window?.__theme || "light");
-//   const toggleTheme = () => {
-//     globalThis.window.__setPreferredTheme(theme === "light" ? "dark" : "light");
-//   };
-
-//   useEffect(() => {
-//     globalThis.window.__onThemeChange = setTheme;
-//   }, []);
-
-//   return (
-//     <ThemeContext.Provider value={{ theme, toggleTheme }}>
-//       {children}
-//     </ThemeContext.Provider>
-//   );
-// }

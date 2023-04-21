@@ -10,21 +10,6 @@
   -webkit-text-size-adjust: 100%;
 }
 
-/* :root.light {
-  --background-color: #f9f9f9;
-  --text-color: #242424;
-  --secondary-background-color: #dcdcdc;
-  --card-background-color: #eaeaea;
-  --download-button-color: blueviolet;
-}
-
-:root.dark {
-  --background-color: #242424;
-  --text-color: #ffffffde;
-  --secondary-background-color: #121111;
-  --card-background-color: #323131;
-  --download-button-color: #ffffffde;
-} */
 body {
   margin: 0;
 }
