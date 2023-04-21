@@ -6,9 +6,38 @@
   <link rel="icon" type="image/svg+xml" href="/vite.svg" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Portfolio</title>
+
+  <style type="text/css">
+    :root.light {
+      color-scheme: light;
+      --background-color: #f9f9f9;
+      --text-color: #242424;
+      --secondary-background-color: #dcdcdc;
+      --card-background-color: #eaeaea;
+      --download-button-color: blueviolet;
+    }
+
+    :root.dark {
+      color-scheme: dark;
+      --background-color: #242424;
+      --text-color: #ffffffde;
+      --secondary-background-color: #121111;
+      --card-background-color: #323131;
+      --download-button-color: #ffffffde;
+    }
+  </style>
 </head>
 
 <body>
+  <script>
+    (function () {
+      let preferredColorScheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      const theme = localStorage.getItem('theme') || preferredColorScheme;
+
+      document.documentElement.className = theme;
+    })()
+  </script>
+
   <div id="root"></div>
   <script type="module" src="/src/main.jsx"></script>
 </body>

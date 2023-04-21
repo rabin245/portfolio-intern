@@ -22,6 +22,7 @@ const Header = ({
   contactRef,
   isMenuOpen,
   toggleMenu,
+  showScrollToTop,
 }) => {
   const menuItems = [
     { title: "Home", reference: homeRef, icon: <HomeIcon /> },
@@ -46,7 +47,7 @@ const Header = ({
   }, []);
 
   return (
-    <div className="Header">
+    <div className={`Header ${showScrollToTop && "opaque"}`}>
       <nav>
         <Logo />
         <Menu
@@ -83,7 +84,7 @@ function App() {
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 200) {
+      if (window.scrollY > 350) {
         setShowScrollToTop(true);
       } else {
         setShowScrollToTop(false);
@@ -105,6 +106,7 @@ function App() {
         projectsRef={projectsRef}
         isMenuOpen={isMenuOpen}
         toggleMenu={toggleMenu}
+        showScrollToTop={showScrollToTop}
       />
       <Home homeRef={homeRef} contactRef={contactRef} />
       <About aboutRef={aboutRef} />

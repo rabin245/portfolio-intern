@@ -1,38 +1,19 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import styles from "./Contact.module.css";
-import PhoneIcon from "../../assets/icons/PhoneIcon";
-import MailIcon from "../../assets/icons/MailIcon";
-import MapIcon from "../../assets/icons/MapIcon";
-import FindMeIcon from "../../assets/icons/FindMeIcon";
 import FormInput from "../../components/FormInput";
 import { Button } from "../../components/Button";
 import { ContactInfo } from "../../components/Card";
 import SendIcon from "../../assets/icons/SendIcon";
+import data from "../../assets/data/data.json";
+import loader from "../../utils/IconLoader";
 
-const ContactForm = ({ inputs, handleChange, handleSubmit }) => {
+const ContactForm = ({ formInputs, handleChange, handleSubmit }) => {
   return (
     <div className={styles.ContactForm}>
       <form action="">
-        <FormInput
-          fieldName="Name"
-          name="name"
-          value={inputs.name}
-          handleChange={handleChange}
-        />
-        <FormInput
-          fieldName="Email"
-          name="email"
-          type="email"
-          value={inputs.email}
-          handleChange={handleChange}
-        />
-        <FormInput
-          fieldName="Message"
-          name="message"
-          value={inputs.message}
-          isMessage={true}
-          handleChange={handleChange}
-        />
+        {formInputs.map((input) => (
+          <FormInput key={input.name} handleChange={handleChange} {...input} />
+        ))}
 
         <div className={styles.button}>
           <Button handleClick={handleSubmit}>
@@ -71,30 +52,29 @@ const Contact = ({ contactRef }) => {
     console.log("Submitted", inputs);
   };
 
-  const contactInfo = [
+  const [contactInfo, setContactInfo] = useState([]);
+
+  useEffect(() => {
+    loader(data.contact).then((data) => setContactInfo(data));
+  }, []);
+
+  const formInputs = [
     {
-      icon: <PhoneIcon size={40} />,
-      title: "Call me",
-      link: "tel:+9779762875880",
-      linkText: "+977-9762875880",
+      fieldName: "Name",
+      name: "name",
+      value: inputs.name,
     },
     {
-      icon: <MailIcon size={40} />,
-      title: "Email me",
-      link: "mailto:drarabin@gmail.com",
-      linkText: "drarabin@gmail.com",
+      fieldName: "Email",
+      name: "email",
+      type: "email",
+      value: inputs.email,
     },
     {
-      icon: <FindMeIcon size={40} />,
-      title: "Find me on",
-      link: "https://www.linkedin.com/in/rabindra-baisnab/",
-      linkText: "Linkedin",
-    },
-    {
-      icon: <MapIcon size={40} />,
-      title: "Address",
-      link: "https://goo.gl/maps/N9qLMN2MeFWjK5UF6",
-      linkText: "Chundevi, Bhaktapur",
+      fieldName: "Message",
+      name: "message",
+      value: inputs.message,
+      isMessage: true,
     },
   ];
 
@@ -114,7 +94,7 @@ const Contact = ({ contactRef }) => {
           <h2>Get in touch</h2>
 
           <ContactForm
-            inputs={inputs}
+            formInputs={formInputs}
             handleChange={handleChange}
             handleSubmit={handleSubmit}
           />

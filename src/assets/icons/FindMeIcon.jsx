@@ -1,9 +1,9 @@
-const FindMeIcon = ({ size }) => (
+const FindMeIcon = () => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     className="icon icon-tabler icon-tabler-location"
-    width={size}
-    height={size}
+    width={40}
+    height={40}
     viewBox="0 0 24 24"
     strokeWidth="1.75"
     stroke="currentColor"

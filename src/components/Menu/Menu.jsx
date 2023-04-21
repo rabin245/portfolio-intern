@@ -11,7 +11,6 @@ const Menu = ({
 }) => {
   const scrollToRef = (ref) => {
     window.scrollTo({ top: ref.current.offsetTop - 65, behavior: "smooth" });
-    toggleMenu();
   };
 
   return (
