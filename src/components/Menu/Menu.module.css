@@ -38,7 +38,7 @@
 }
 
 .player {
-  margin-top: -10rem;
+  margin-block-start: -10rem;
 }
 
 @media only screen and (max-width: 768px) {
