@@ -95,9 +95,6 @@
   transform: translateY(3rem);
 }
 
-.ProjectCard__image {
-}
-
 .ProjectCard__image > img {
   object-fit: cover;
   width: 100%;
@@ -156,7 +153,7 @@
 
 /* contactinfo card */
 .infoDiv {
-  margin-bottom: 1rem;
+  margin-block-end: 1rem;
   display: flex;
   align-items: center;
   gap: 1rem;

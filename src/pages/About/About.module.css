@@ -21,7 +21,7 @@
   margin: 0;
   font-size: 3.25rem;
   font-weight: 800;
-  margin-bottom: 1rem;
+  margin-block-end: 1rem;
   color: blueviolet;
 }
 
@@ -40,7 +40,7 @@
   font-size: 2rem;
   font-weight: 300;
   letter-spacing: 1.5px;
-  margin-bottom: 4rem;
+  margin-block-end: 4rem;
 }
 
 .content span {
@@ -53,7 +53,7 @@
   display: grid;
   gap: 1rem;
   grid-template-columns: repeat(3, minmax(200px, 1fr));
-  margin-top: 3rem;
+  margin-block-start: 3rem;
 }
 
 @media only screen and (max-width: 1024px) {
@@ -67,7 +67,7 @@
   .experience h2 {
     font-size: 2rem;
     text-align: center;
-    margin-bottom: 0rem;
+    margin-block-end: 0rem;
   }
 
   .experience span {
@@ -80,7 +80,7 @@
 
   .cards {
     grid-template-columns: repeat(3, minmax(160px, 1fr));
-    margin-top: 0rem;
+    margin-block-start: 0rem;
   }
 }
 
@@ -109,7 +109,7 @@
   }
 
   .content {
-    margin-bottom: 1rem;
+    margin-block-end: 1rem;
     text-align: center;
   }
 
