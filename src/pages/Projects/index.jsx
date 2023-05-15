@@ -3,14 +3,13 @@ import { ProjectCard } from "../../components/Card";
 import ArrowRightIcon from "../../assets/icons/ArrowRightIcon";
 import projectData from "../../assets/data/data.json";
 import { useState, useEffect } from "react";
+import loader from "../../utils/ImageLoader";
 
 const Projects = ({ projectsRef }) => {
   const [projects, setProjects] = useState([]);
 
   useEffect(() => {
-    const data = projectData.projects;
-
-    setProjects(data);
+    loader(projectData.projects).then((data) => setProjects(data));
   }, []);
 
   return (

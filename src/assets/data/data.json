@@ -1,23 +1,23 @@
 {
   "projects": [
     {
-      "image": "/src/assets/images/project-portfolio.png",
+      "image": "project-portfolio",
       "title": "Portfolio",
       "github": "https://github.com/rabin245/portfolio-intern"
     },
     {
-      "image": "/src/assets/images/project-electiondapp.png",
+      "image": "project-electiondapp",
       "title": "Election Voting Dapp",
       "link": "https://electiondapp.onrender.com/",
       "github": "https://github.com/rabin245/election_ui"
     },
     {
-      "image": "/src/assets/images/project-blogapp.png",
+      "image": "project-blogapp",
       "title": "Blog App",
       "github": "https://github.com/rabin245/blog_app_frontend"
     },
     {
-      "image": "/src/assets/images/project-quizzical.png",
+      "image": "project-quizzical",
       "title": "Quizzical",
       "link": "https://rabin245.github.io/quizzical/",
       "github": "https://github.com/rabin245/quizzical"
