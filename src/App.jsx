@@ -91,9 +91,24 @@ function App() {
       }
     };
 
+    const toggleMenuOff = () => {
+      setIsMenuOpen(false);
+    };
+
     window.addEventListener("scroll", handleScroll);
 
-    return () => window.removeEventListener("scroll", handleScroll);
+    const refs = [homeRef, aboutRef, skillsRef, projectsRef, contactRef];
+
+    refs.forEach((ref) => {
+      ref.current.addEventListener("click", toggleMenuOff);
+    });
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+      refs.forEach((ref) => {
+        ref.current.addEventListener("click", toggleMenuOff);
+      });
+    };
   }, []);
 
   return (
