@@ -1,5 +1,4 @@
 import styles from "./Home.module.css";
-import Image from "../../assets/images/banner-image.png";
 import { Button, SocialButton } from "../../components/Button";
 import DownloadIcon from "../../assets/icons/DownloadIcon";
 import data from "../../assets/data/data.json";
