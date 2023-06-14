@@ -1,10 +1,10 @@
 import styles from "./Home.module.css";
-import Image from "../../assets/images/banner-image.png";
 import { Button, SocialButton } from "../../components/Button";
 import DownloadIcon from "../../assets/icons/DownloadIcon";
 import data from "../../assets/data/data.json";
 import { useState, useEffect } from "react";
 import loader from "../../utils/IconLoader";
+import { Player } from "@lottiefiles/react-lottie-player";
 
 const Home = ({ homeRef, contactRef }) => {
   const scrollToRef = (ref) =>
@@ -45,7 +45,12 @@ const Home = ({ homeRef, contactRef }) => {
           </div>
         </div>
         <div className={styles.image}>
-          <img src={Image} alt="banner" />
+          <Player
+            src="https://assets1.lottiefiles.com/packages/lf20_xmkgn4jj.json"
+            speed={0.4}
+            autoplay
+            loop
+          ></Player>
         </div>
       </div>
     </div>
