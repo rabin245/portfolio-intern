@@ -15,7 +15,7 @@ const About = ({ aboutRef }) => {
     <div className={styles.About} ref={aboutRef}>
       <div className={styles.wrapper}>
         <div className={styles.experience}>
-          <h2>0+</h2>
+          <h2>&lt;1</h2>
           <span>years experience in web development</span>
         </div>
 

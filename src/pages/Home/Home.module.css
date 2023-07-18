@@ -7,12 +7,14 @@
 .wrapper {
   padding: 2rem 8rem;
   display: flex;
-  align-items: center;
+  justify-content: space-between;
+  align-items: end;
+  width: 100%;
 }
 
 .content {
   flex: 2;
-  padding: 4rem 0;
+  padding: 1rem 0;
 }
 
 .content h1 {
@@ -49,14 +51,13 @@
 
 .image {
   flex: 2;
-  margin: 0 1rem;
 }
 
 @media only screen and (max-width: 1024px) {
   .wrapper {
     flex-direction: column-reverse;
     padding: 2rem;
-    align-items: center;
+    align-items: start;
   }
 
   .content {
