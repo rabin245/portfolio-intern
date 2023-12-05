@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useEffect, useState } from "react";
 import styles from "./Contact.module.css";
 import FormInput from "../../components/FormInput";
 import { Button } from "../../components/Button";
@@ -7,16 +7,16 @@ import SendIcon from "../../assets/icons/SendIcon";
 import data from "../../assets/data/data.json";
 import loader from "../../utils/IconLoader";
 
-const ContactForm = ({ formInputs, handleChange, handleSubmit }) => {
+const ContactForm = ({ formInputs, handleChange }) => {
   return (
     <div className={styles.ContactForm}>
-      <form action="">
+      <form action={import.meta.env.VITE_FORMSPREE_URL} method="POST">
         {formInputs.map((input) => (
           <FormInput key={input.name} handleChange={handleChange} {...input} />
         ))}
 
         <div className={styles.button}>
-          <Button handleClick={handleSubmit}>
+          <Button buttonType="submit">
             <span>Send</span>
             <SendIcon />
           </Button>
@@ -44,12 +44,6 @@ const Contact = ({ contactRef }) => {
         [name]: value,
       };
     });
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-
-    console.log("Submitted", inputs);
   };
 
   const [contactInfo, setContactInfo] = useState([]);
@@ -96,7 +90,6 @@ const Contact = ({ contactRef }) => {
           <ContactForm
             formInputs={formInputs}
             handleChange={handleChange}
-            handleSubmit={handleSubmit}
           />
         </div>
       </div>

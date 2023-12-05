@@ -1,7 +1,7 @@
 import styles from "./Button.module.css";
 
-const Button = ({ children, handleClick = () => {}, type = "normal" }) => {
-  if (type === "download")
+const Button = ({ children, type = "normal", buttonType = "button" }) => {
+  if (type === "download") {
     return (
       <a
         href="/src/assets/cv/cv.pdf"
@@ -12,9 +12,10 @@ const Button = ({ children, handleClick = () => {}, type = "normal" }) => {
         {children}
       </a>
     );
+  }
 
   return (
-    <button className={styles.Button} onClick={handleClick}>
+    <button className={styles.Button} type={buttonType}>
       {children}
     </button>
   );
