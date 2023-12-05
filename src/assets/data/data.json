@@ -46,6 +46,14 @@
       "icon": "ReactIcon"
     },
     {
+      "title": "Redux",
+      "icon": "ReduxIcon"
+    },
+    {
+      "title": "Node",
+      "icon": "NodeIcon"
+    },
+    {
       "title": "SASS",
       "icon": "SassIcon"
     },
@@ -56,6 +64,14 @@
     {
       "title": "Bootstrap",
       "icon": "BootstrapIcon"
+    },
+    {
+      "title": "SQL",
+      "icon": "SqlIcon"
+    },
+    {
+      "title": "MongoDB",
+      "icon": "MongoIcon"
     }
   ],
   "socials": [
