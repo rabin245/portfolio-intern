@@ -8,7 +8,7 @@ const About = ({ aboutRef }) => {
   const cards = [
     { title: "Front End Developer", icon: <WebIcon /> },
     { title: "Back End Developer", icon: <ServerIcon /> },
-    { title: "Response Web Design", icon: <DevicesIcon /> },
+    { title: "Responsive Web Design", icon: <DevicesIcon /> },
   ];
 
   return (
@@ -21,8 +21,8 @@ const About = ({ aboutRef }) => {
 
         <div className={styles.description}>
           <div className={styles.content}>
-            <span>Full Stack Web Developer</span> specialized in ReactJS and
-            NodeJS
+            <span>Full Stack Web Developer</span>{" "}
+            specialized in ReactJS and NodeJS
           </div>
           <div className={styles.cards}>
             {cards.map((card, index) => (
