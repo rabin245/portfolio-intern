@@ -10,24 +10,28 @@ const FormInput = ({
 }) => {
   return (
     <div className={styles.FormInput}>
-      <span>{fieldName}</span>
-      {isMessage ? (
-        <textarea
-          type="text"
-          name={name}
-          className={styles.input}
-          value={value}
-          onChange={handleChange}
-        />
-      ) : (
-        <input
-          type={type}
-          name={name}
-          className={styles.input}
-          value={value}
-          onChange={handleChange}
-        />
-      )}
+      <label for={name}>{fieldName}</label>
+      {isMessage
+        ? (
+          <textarea
+            type="text"
+            id={name}
+            name={name}
+            className={styles.input}
+            value={value}
+            onChange={handleChange}
+          />
+        )
+        : (
+          <input
+            type={type}
+            id={name}
+            name={name}
+            className={styles.input}
+            value={value}
+            onChange={handleChange}
+          />
+        )}
     </div>
   );
 };
