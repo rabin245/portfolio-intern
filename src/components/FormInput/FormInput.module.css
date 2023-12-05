@@ -31,6 +31,7 @@
   color: var(--text-color);
   opacity: 0.9;
   transition: color 0.2s ease-in-out;
+  font-family: 'Comfortaa', Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
 }
 
 .input:focus {
