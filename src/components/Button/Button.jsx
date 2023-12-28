@@ -4,7 +4,7 @@ const Button = ({ children, type = "normal", buttonType = "button" }) => {
   if (type === "download") {
     return (
       <a
-        href="/src/assets/cv/cv.pdf"
+        href="/cv.pdf"
         className={`${styles.Button} ${styles.DownloadButton}`}
         download={true}
         target="_blank"

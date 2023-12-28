@@ -89,6 +89,7 @@
 .ProjectCard {
   position: relative;
   overflow: hidden;
+  height: fit-content;
 }
 
 .ProjectCard:nth-child(even) {
