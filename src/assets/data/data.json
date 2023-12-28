@@ -1,10 +1,9 @@
 {
   "projects": [
     {
-      "image": "project-portfolio",
-      "title": "Portfolio",
-      "github": "https://github.com/rabin245/portfolio-intern",
-      "link": "https://www.rabindrabaisnab.com.np/"
+      "image": "project-blogtalk",
+      "title": "BlogTalk",
+      "github": "https://github.com/rabin245/sails-blog-app"
     },
     {
       "image": "project-electiondapp",
@@ -114,7 +113,6 @@
     },
     {
       "title": "Address",
-
       "icon": "MapIcon",
       "link": "https://goo.gl/maps/N9qLMN2MeFWjK5UF6",
       "linkText": "Chundevi, Bhaktapur"
