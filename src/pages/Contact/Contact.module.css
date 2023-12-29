@@ -72,4 +72,13 @@
     text-align: center;
     font-size: 1.2rem;
   }
+
+  .button {
+    width: auto;
+  }
+
+  .button > button {
+    width: 100%;
+    justify-content: center;
+  }
 }
