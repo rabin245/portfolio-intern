@@ -10,7 +10,7 @@ const FormInput = ({
 }) => {
   return (
     <div className={styles.FormInput}>
-      <label for={name}>{fieldName}</label>
+      <label htmlFor={name}>{fieldName}</label>
       {isMessage
         ? (
           <textarea
