@@ -117,5 +117,33 @@
       "link": "https://goo.gl/maps/N9qLMN2MeFWjK5UF6",
       "linkText": "Chundevi, Bhaktapur"
     }
+  ],
+  "experience": [
+    {
+      "position": "Software Engineer",
+      "location": "Thapagaun, Kathmandu",
+      "office": "Optimum Futurist Pvt. Ltd.",
+      "date": "July 2023 - Dec 2023",
+      "office_site": "optimumfuturist.com",
+      "link": "https://optimumfuturist.com/",
+      "description": [
+        "Developed and implemented various features within the existing Human Resource Management system",
+        "Collaborated on multiple modules utilizing diverse tech stacks including React, Node, MYSQL, and SailsJS"
+      ]
+    },
+    {
+      "position": "Software Engineer Intern",
+      "location": "Thapagaun, Kathmandu",
+      "office": "Optimum Futurist Pvt. Ltd.",
+      "date": "April 2023 - July 2023",
+      "office_site": "optimumfuturist.com",
+      "link": "https://optimumfuturist.com/",
+      "description": [
+        "Learned ReactJS core concepts and created web applications: Portfolio site and Spotify clone",
+        "Built RESTful APIs using FastifyJS, PostgreSQL, and Sequelize",
+        "Learned about authentication and authorization in web applications and their implementations using sessions, JWT and OAuth2",
+        "Created a posts application using FastifyJS, Sequelize, PostgreSQL, and EJS with implementation of authentication and authorization using sessions and OAuth2"
+      ]
+    }
   ]
 }
