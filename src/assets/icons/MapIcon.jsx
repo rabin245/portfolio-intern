@@ -1,11 +1,11 @@
-const MapIcon = () => (
+const MapIcon = ({ width = 40, height = 40, strokeWidth = 1.75 }) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     className="icon icon-tabler icon-tabler-map-pin"
-    width={40}
-    height={40}
+    width={width}
+    height={height}
     viewBox="0 0 24 24"
-    strokeWidth="1.75"
+    strokeWidth={strokeWidth}
     stroke="currentColor"
     fill="none"
     strokeLinecap="round"
