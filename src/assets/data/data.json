@@ -101,7 +101,6 @@
     {
       "title": "Email me",
       "icon": "MailIcon",
-
       "link": "mailto:drarabin@gmail.com",
       "linkText": "drarabin@gmail.com"
     },
@@ -123,7 +122,7 @@
       "position": "Software Engineer",
       "location": "Thapagaun, Kathmandu",
       "office": "Optimum Futurist Pvt. Ltd.",
-      "date": "July 2023 - Dec 2023",
+      "date": "July 2023 - Jan 2024",
       "office_site": "optimumfuturist.com",
       "link": "https://optimumfuturist.com/",
       "description": [
