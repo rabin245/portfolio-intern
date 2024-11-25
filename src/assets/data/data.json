@@ -128,7 +128,8 @@
       "link": "https://optimumfuturist.com/",
       "description": [
         "Developed and implemented various features within the existing Human Resource Management system",
-        "Collaborated on multiple modules utilizing diverse tech stacks including React, Node, MYSQL, and SailsJS"
+        "Collaborated on multiple modules utilizing diverse tech stacks including React, Node, MYSQL, and SailsJS",
+        "Wrote unit tests with Jest and conducted manual testing for applications and APIs to ensure quality and reliability."
       ]
     },
     {
